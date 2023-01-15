@@ -16,7 +16,7 @@
     right: 1em;
     color: crimson;
 }
-/* .mark {
+.mark {
     position: absolute;
     top: 0.5em;
     left: 1em;
@@ -24,4 +24,8 @@
     background-color: #cc4646;
     border-radius: 5px;
     padding: 3px 8px;
-} */
+}
+img {
+    max-width: 100%;
+    width: 1000px;
+}

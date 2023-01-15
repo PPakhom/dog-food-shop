@@ -5,9 +5,10 @@ export default ({text, like}) => {
     // console.log(like);
     return <div className="card">
         <span className="mark">
-            -50%
+            {`-${text.discount}%`}
         </span>
-        {text}
+        <img src={text.pictures} alt="Нет изображения" />
+        {text.name}
         <span className="card__heart">
             {
                 like
