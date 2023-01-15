@@ -2,13 +2,16 @@ import React from "react";
 import "./index.css"
 
 export default ({text, like}) => {
-    console.log(like);
+    // console.log(like);
     return <div className="card">
+        <span className="mark">
+            -50%
+        </span>
         {text}
         <span className="card__heart">
             {
                 like
-                ? <i class="fa-solid fa-heart"></i>
+                ? <i className="fa-solid fa-heart"></i>
                 : <i className="fa-regular fa-heart"></i>
             }
         </span>

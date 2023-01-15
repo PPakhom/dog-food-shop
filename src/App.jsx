@@ -1,28 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.css";
+import products from "./assets/data.json";
 
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
-import Card from "./components/Card";
+// import Search from "./components/Search/search"
+
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
 
 const smiles = ["^_^", "=)", "O_o", ";(", "^_0", "@_@", "-_-"];
 
 const App = () => {
+    const [user, setUser] = useState(localStorage.getItem("user8"));
     return (
         <div className="container">
-            <Header/>
+            <Header user={user} setUser={setUser} products={products}/>
             <main>
-                <h1>Главная страница</h1>
-                <div className="cards">
-                    {/* {smiles} */}
-                    {/* {smiles.map((el, i) => <span key={i}>{el}</span>)} */}
-                    {/* key={"card_" + i} => card_0, card_1 */}
-                    {smiles.map((el, i) => <Card key={"card_" + i} text={el} like={(i + 1) % 2 === 0}/>)}
-                </div>    
+                {/* <Search data={products}/> */}
+                {user ? <Catalog data={products}/> : <Home data={smiles}/>}
             </main>
             <Footer/>
         </div>
     )
 }
-// (5 + 2) * 3
 export default App;
