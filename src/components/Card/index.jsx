@@ -15,8 +15,8 @@ export default ({text, like}) => {
             }
         </span>
 
-        {text.discount > 0 && <span className="discount">{`-${text.discount}%`}</span>}
-        <img src={text.pictures} alt="Нет изображения"/>
+        {(text.discount && text.discount > 0) && <span className="discount">{`-${text.discount}%`}</span>}
+        {(text.discount && text.discount > 0) && <img src={text.pictures} alt="Нет изображения"/>}
         {
             text.discount > 0
                 ? <span className="price">{text.price} ₽</span>
@@ -25,14 +25,18 @@ export default ({text, like}) => {
         <span className="price__discount">
             {
                 text.discount > 0
-                ? <span className="price__red">{text.price - text.price*text.discount/100} ₽</span>
-                : <span>{text.price - text.price*text.discount / 100} ₽</span>
+                ? <span className="price__red">{text.price - text.price * text.discount / 100} ₽</span>
+                : (text.discount) ? <span>{text.price - text.price*text.discount / 100} ₽</span> : ""
             }
         </span>
-        <span className="wight">
-            {text.wight}
-        </span>
-        <span className="name">{text.name}</span>
-        <div className="add__cart"><button>В корзину</button></div>
+        {text.wight && <span className="wight">{text.wight}</span>}
+        {
+            (text.name)
+            ? <>
+                  <span className="name">{text.name}</span>
+                  <div className="add__cart"><button>В корзину</button></div> 
+              </>
+            : <span className="name">{text}</span>
+        } 
     </div>
 }
