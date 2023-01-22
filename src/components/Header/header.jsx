@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Search from "../Search/search"
 import "./header.css";
 import Logo from "../../templates/Icons/logo-dogfood.svg";
+// import {ReactComponent as Logo} from "../../templates/Icons/logo-dogfood.svg";
 import {ReactComponent as Favorites} from "../../templates/Icons/ic-favorites.svg";
 import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
 // import {ReactComponent as Logo} from "../../templates/images/logo-dogfood1.svg";
@@ -28,7 +29,7 @@ export default ({user, setUser, products}) => {
         <div className="header__top">
             <a className="logo" href="/" title="Магазин корма для собак">
                 <img src={Logo} alt="DogFood"/>
-                {/* {<Logo/>*/}
+                {/* <Logo/> */}
             </a>
             <div className="header__catalog" href=""><button><i className="fa-solid fa-list"></i>Каталог</button></div>
             <Search data={products}/>

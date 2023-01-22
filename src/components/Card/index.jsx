@@ -16,7 +16,7 @@ export default ({text, like}) => {
         </span>
 
         {(text.discount && text.discount > 0) && <span className="discount">{`-${text.discount}%`}</span>}
-        {(text.discount && text.discount > 0) && <img src={text.pictures} alt="Нет изображения"/>}
+        {(text.pictures) && <img src={text.pictures} alt="Нет изображения"/>}
         {
             text.discount > 0
                 ? <span className="price">{text.price} ₽</span>
