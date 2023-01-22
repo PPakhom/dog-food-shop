@@ -1,9 +1,10 @@
 .search-block {
-    min-width: 300px;
+    min-width: 350px;
     width: max-content;
     display: flex;
     align-items: center;
     position: relative;
+    padding: 0 0 0 10em;
 }
 .search-block>input {
     flex: 1;

@@ -1,29 +1,135 @@
 body {
     margin: 0;
-    font-family: sans-serif;
 }
 a {
     text-decoration: none;
     color: inherit;
 }
 .container {
+    min-width: 100vh;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 100px auto 50px;
+    grid-template-rows: 330px auto 250px;
+    background-image: url("./templates/Images/bg-dogfood-dogpaw.png");
+    background-size: 10em;
+    background-color: beige;
 }
-.container>* {
+.container header, footer {
+    padding: 0 calc(50% - 740px);
+}
+.container main {
     padding: 0 calc(50% - 600px);
+}
+.banner  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: gold;
+    border-radius: 0.5em;
+    margin-top: -1em;
+    padding: 0 2em;;
+    gap: 2em;
+    font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+.banner p {
+    font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+.banner__pic {
+    background-size: cover;
+    width: 500px;
+    height: 350px;
+    z-index: 1;
+}
+.banner__proc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    font-size: 14em;
+    color: coral;
+    opacity: 0.5;
+    overflow: hidden;
+    width: 0.8em;
+    height: 0.6em;
+    padding-bottom: 0.05em;
+    z-index: 0;
+}
+/* .add_promotion1 {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+} */
+.promotion {
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 2fr); */
+    display: flex;
+    justify-content:space-between ;
+    gap: 1em;
+    /* align-items: center; */
+    /* z-index: 0; */
+    /* margin-bottom: 1em; */
+}
+.promotion__card {
+    width: 590px;
+    height: 380px;
+    background-color: gold;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1em;
+}
+.promotion__card:hover {
+    box-shadow: 0 0 25px #2226;
 }
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
+    gap: 1em;
+    margin: 1em auto;
 }
-@media (max-width: 1260px) {
-    .container>* {
-        padding: 0 30px;
+@media (max-width: 1200px) {
+    .container header, footer {
+        padding: 0 40px;
+    }
+    .container main {
+        padding: 0 40px;
     }
     .cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container .footer__container {
+        display: flex;
+        justify-content: center;
+    }
+    .container footer .footer__group {
+        display: none;
+    }
+   .container footer .footer__mobile__network {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -1.5em;
+    }
+    .container footer .socialnetwork {
+        width: 200px;
+    }
+    .container footer .logo {
+        display: none;
+    }
+    .container footer .footer__mobile__copyright {
+        display: flex;
+        margin: 1em;
     }
 }
+@font-face {
+    font-family: "ArtegraSoft-Black";
+    src: url("./templates/Fonts/ArtegraSoft-Black.ttf");
+}
+@font-face {
+    font-family: "ArtegraSoft-Regular";
+    src: url("./templates/Fonts/ArtegraSoft-Regular.ttf");
+  }
