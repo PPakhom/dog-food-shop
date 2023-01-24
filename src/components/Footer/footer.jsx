@@ -7,13 +7,15 @@ export default () => {
     return (
         <footer>
             {/* <div className="footer__container"> */}
+                <div className="footer__mobile">
+                    <div className="footer__group">
+                            <a className="logo" href="/" title="Магазин корма для собак">
+                                <img src={Logo} alt="DogFood"/>
+                            </a>
+                    </div>
+                    <div className="footer__copyright">© "Интернет-магазин DogFood", {year}</div>
+                </div>
                 <div className="footer__group">
-                        <a className="logo" href="/" title="Магазин корма для собак">
-                            <img src={Logo} alt="DogFood"/>
-                        </a>
-                        <div className="footer__copyright footer__mobile">© "Интернет-магазин DogFood", {year}</div>
-              </div>
-               <div className="footer__group">
                         <a href="#">Каталог</a>
                         <a href="#">Акции</a>
                         <a href="#">Новости</a>

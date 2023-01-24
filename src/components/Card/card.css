@@ -7,11 +7,11 @@
     box-shadow: 0 0 5px #2226;
     border-radius: 1em;
     padding: 1em;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 0.2em;
+    /* gap: 0.2em; */
     /* justify-content: center; */
     /* align-items: center; */
     font-family: 'Commissioner', Arial, Helvetica, sans-serif;
@@ -39,7 +39,6 @@
 }
 .card img {
     max-width: 100%;
-    padding: 4em;
 }
 .price {
     font-size: 0.7em;

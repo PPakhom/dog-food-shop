@@ -28,10 +28,18 @@ export default ({data}) => {
                 })}
             </div>
      
-            <div className="ads">
+            {/* <div className="ads">
                 <div className="ad ads__mobile" style={{ backgroundImage: `url(${AdCard1})`}}></div>    
                 <div className="ad" style={{ backgroundImage: `url(${AdCard2})`}}></div>
+            </div> */}
+
+            <div className="ads">
+                <div className="ad ads__mobile"><img src={AdCard1} alt="Реклама 1"/></div>
+                <div className="ad"><img src={AdCard2} alt="Реклама 2"/></div>
             </div>
+
+
+
 
             {/* <div className="promotion">
                 <div className="promotion__card promotion__card__mobile" style={{ backgroundImage: `url(${Promotion1})`}}></div>    
