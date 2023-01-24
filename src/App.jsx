@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import "./style.css";
 import products from "./assets/data.json";
 
-import Header from "./components/Header/header";
-import Footer from "./components/Footer/footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 // import Search from "./components/Search/search"
 
 import Home from "./pages/Home";

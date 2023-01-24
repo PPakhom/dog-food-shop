@@ -1,34 +1,36 @@
 header {
-    background-color:coral;
-    color: #fff;
     /* display: flex; */
     /* flex-direction: column; */
+    /* gap: 60px; */
+    background-color:coral;
+    color: #fff;
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
-    width: 100%;
 }
 .header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif; */
     margin: 0 2em;
 }
-.header__bottom h2{
+.header__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5em 0 0 4.2em;
+}
+.header__bottom h2 {
     width: 300px;
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
     font-size: 2em;
-    line-height: 1.2;
-    margin-left: 1em;
+    line-height: 1.2em;
+    margin: -0.2em 0;
 }
 .header__bottom p {
     width: 330px;
     font-size: 1em;
     line-height: 1.2em;
-    /* font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif; */
-    margin-top: -1em;
-    margin-left: 2em;
+    /* margin-top: -2em; */
 }
-
 .logo {
     width: 120px;
     max-width: 120px;
@@ -37,19 +39,16 @@ header {
     margin-right: 1em;
 }
 .header__catalog button {
-    /* dispaly: ; */
+    width: 9em;
+    height: 3em;
+    background-color: rgb(231, 68, 9);
     border: #fff  solid 0.1em;
-    background-color: coral;
     border-radius: 0.3em;
     color: #fff;
-    width: 8em;
-    height: 3em;
     font-size: 1em;
-    background-color: rgb(231, 68, 9);
 }
 .header__catalog button:hover {
     background-color: rgb(255, 152, 115);
-    /* opacity: 0.8; */
 }
 .search {
     background-color: transparent;

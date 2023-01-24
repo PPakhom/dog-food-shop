@@ -14,14 +14,16 @@ export default ({data}) => {
         updateText(e.target.value);
         let arr = data.filter(el => el.name.toLowerCase().includes(e.target.value.toLowerCase()));
         setSearchData(arr);
-        console.log(arr);
+        // console.log(arr);
     }
-    return <div className="search-block">
-        <input placeholder="Поиск..." value={text} onChange={search}/>
-        <button>{text ? <CloseImg onClick={clearSearch}/> : <SearchImg/>}</button>
-        {text && <div className="search-result">
-            По запросу <b>{text}</b>&nbsp;
-            {searchData.length > 0 ? `найдено ${searchData.length} товаров` : "не найдено ни одного товара"}
-        </div>}
-    </div>
+    return (
+        <div className="search-block">
+            <input placeholder="Поиск..." value={text} onChange={search}/>
+            <button>{text ? <CloseImg onClick={clearSearch}/> : <SearchImg/>}</button>
+            {text && <div className="search-result">
+                По запросу <b>{text}</b>&nbsp;
+                {searchData.length > 0 ? `найдено ${searchData.length} товаров` : "не найдено ни одного товара"}
+            </div>}
+        </div>
+    )
 }

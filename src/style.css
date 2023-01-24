@@ -6,50 +6,52 @@ a {
     color: inherit;
 }
 .container {
-    width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 330px auto 250px;
-    /* background-image: url("./templates/Images/bg-dogfood-dogpaw.png"); */
-    /* background-size: 10em; */
-    /* background-color: beige; */
+    grid-template-rows: 330px auto 200px;
+    font-size: 1em;
 }
-/* .container header, footer { */
-    /* padding: 0 calc(50% - 740px); */
-    /* padding: 0 2em; */
-/* } */
-.container main {
+.container>* {
+    padding: 0 calc(50% - 600px);
+}
+main {
     background-image: url("./templates/Images/bg-dogfood-dogpaw.png");
-    /* background-position: center; */
-    background-size: 10em;
     background-color: beige;
-    /* padding: 0 calc(50% - 600px); */
-    width: 100%;
+    background-size: 10em;
 }
-.banner  {
+.main-page {
+    display: flex;
+    flex-direction: column;
+    padding: 0 calc(50% - 600px);
+    margin: -2em auto 1em;
+}
+.ad-banner  {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: gold;
-    border-radius: 0.5em;
-    margin-top: -1em;
+    border-radius: 1em;
+    margin: 0 2em 1em;
     padding: 0 2em;;
-    gap: 2em;
+    gap: 1em;
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
     font-size: 2em;
 }
-.banner p {
+.ad-banner p {
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
     font-size: 0.9em;
 }
-.banner__pic {
+.ad-banner__img {
     background-size: cover;
-    width: 500px;
+    width: 550px;
     height: 350px;
     z-index: 1;
 }
-.banner__proc {
+.ad-banner__proc {
     position: absolute;
+    width: 0.8em;
+    height: 0.6em;
     top: 0;
     right: 0;
     display: flex;
@@ -59,26 +61,16 @@ a {
     color: coral;
     opacity: 0.5;
     overflow: hidden;
-    width: 0.8em;
-    height: 0.6em;
     padding-bottom: 0.05em;
     z-index: 0;
 }
-/* .add_promotion1 {
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
-} */
-.promotion {
-    /* display: grid; */
-    /* grid-template-columns: repeat(4, 2fr); */
+.ads {
     display: flex;
     justify-content:space-between ;
+    margin: 1em 4em;
     gap: 1em;
-    /* align-items: center; */
-    /* z-index: 0; */
-    /* margin-bottom: 1em; */
 }
-.promotion__card {
+.ad {
     width: 590px;
     height: 380px;
     background-color: gold;
@@ -87,30 +79,29 @@ a {
     background-position: center;
     border-radius: 1em;
 }
-.promotion__card:hover {
+.ad:hover {
     box-shadow: 0 0 25px #2226;
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
-    margin: 1em auto;
+    margin: 0 4em 0;
 }
-@media (max-width: 720px) {
-    .container {
-        width: 100%;
+/* 3 */
+@media (max-width: 1260px) {
+    .container>* {
+        padding: 0 30px;
     }
-    .container header, footer {
-        padding: 0 40px;
-    }
-    .container main {
-        padding: 0 20px;
-        /* width: 100%; */
-    }
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .promotion__card {
+    /* .container header, footer { */
+        /* padding: 0 20px; */
+    /* } */
+    /* .container main { */
+        /* padding: 0 20px; */
+    /* } */
+
+    
+    /* .promotion__card {
         display: none;
     }
     .promotion__card__mobile {
@@ -139,6 +130,58 @@ a {
     .container footer .footer__mobile__copyright {
         display: flex;
         margin: 1em;
+    } */
+}
+/* 2 */
+@media (max-width: 768px) {
+    /* .container>* {
+        padding: 0 px;
+    } */
+    /* .container {
+        grid-template-rows: 330px auto 250px;
+    } */
+    /* body {
+        font-size: 0.8em;
+    } */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: 100px; */
+        /* padding: 5em; */
+        font-size: 1.5em;
+    }
+    /* .card {
+        padding: 1em;
+    } */
+}
+/* 1 and Footer*/
+@media (max-width: 480px) {
+    body {
+        font-size: 0.7em;
+    }
+    .container {
+        grid-template-rows: 300px auto 200px;
+    }
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container footer .footer__group {
+        display: none;
+    }
+    .container footer .footer__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -1.5em;
+    }
+}
+/* 1 */
+@media (max-width: 320px) {
+    body {
+        font-size: 0.6em;
+    }
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @font-face {
