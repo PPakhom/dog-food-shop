@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.205b9078.css",
-    "main.js": "./static/js/main.2696a082.js",
+    "main.css": "./static/css/main.d47b7ac3.css",
+    "main.js": "./static/js/main.573a714e.js",
     "static/media/ArtegraSoft-Black.ttf": "./static/media/ArtegraSoft-Black.e7784737638c71f503c3.ttf",
     "static/media/training-set.jpg": "./static/media/training-set.fbdfb20d0fac7bbc4b8d.jpg",
     "static/media/ArtegraSoft-Regular.ttf": "./static/media/ArtegraSoft-Regular.dedb65bfc3e338cba763.ttf",
@@ -16,11 +16,11 @@
     "static/media/ic-favorites.svg": "./static/media/ic-favorites.eb441df174ebe11ea363f0bffa4f0c1c.svg",
     "static/media/magnifying-glass-solid.svg": "./static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
     "static/media/ic-cart.svg": "./static/media/ic-cart.9c313428b16ea58eb7be66a872c2f818.svg",
-    "main.205b9078.css.map": "./static/css/main.205b9078.css.map",
-    "main.2696a082.js.map": "./static/js/main.2696a082.js.map"
+    "main.d47b7ac3.css.map": "./static/css/main.d47b7ac3.css.map",
+    "main.573a714e.js.map": "./static/js/main.573a714e.js.map"
   },
   "entrypoints": [
-    "static/css/main.205b9078.css",
-    "static/js/main.2696a082.js"
+    "static/css/main.d47b7ac3.css",
+    "static/js/main.573a714e.js"
   ]
 }
