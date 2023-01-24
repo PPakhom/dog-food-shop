@@ -174,14 +174,31 @@ main {
         margin: 0 2em 0;
     }
     .card .add__cart button {
-        width: 10em;
-        height: 3em;
+        width: 15em;
+        height: 4.5em;
         border-radius: 1em;
         border: none;
         background-color: coral;
         color: #fff;
         font-size: 0.8em;
-    }}
+    }
+    .ads__mobile {
+        display: flex;
+        /* padding: 2em; */
+    }
+    .ads {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   .ads img {
+        max-width: 100%;
+        /* position: absolute; */
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(12.5%, -50%); */
+        /* object-fit: cover;     */
+}
+
+}
 /* 1 and Footer*/
 @media (max-width: 480px) {
     .container {
@@ -249,8 +266,8 @@ main {
         grid-template-columns: repeat(1, 1fr);
     }
    .ads img {
-        /* position: absolute; */
         max-width: 100%;
+        /* position: absolute; */
         /* top: 50%; */
         /* left: 50%; */
         /* transform: translate(12.5%, -50%); */
