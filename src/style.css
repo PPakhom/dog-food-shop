@@ -9,7 +9,7 @@ a {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 330px auto 200px;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 .container>* {
     padding: 0 calc(50% - 600px);
@@ -36,11 +36,11 @@ main {
     padding: 0 2em;;
     gap: 1em;
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .ad-banner p {
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
 }
 .ad-banner__img {
     background-size: cover;
@@ -64,46 +64,26 @@ main {
     padding-bottom: 0.05em;
     z-index: 0;
 }
-/* .ads {
-    display: flex;
-    justify-content:space-between ;
-    margin: 1em 4em;
-    gap: 1em;
-} */
-.ads {
-    /* position: relative; */
+.ads__mobile {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* justify-content:space-between ; */
     margin: 1em 4em;
-    /* margin: 1em 2em; */
     gap: 1em;
-    /* padding: 0 3em; */
 }
-
-.ad, .ads__mobile {
-    /* width: 590px;
-    height: 380px; */
+.ad {
     background-color: gold;
-    /* background-size: 100%; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
     border-radius: 1em;
     padding: 1em;
 }
 .ad:hover {
     box-shadow: 0 0 25px #2226;
 }
-.ads__mobile {
+/* .ads__mobile {
     display: flex;
-}
-.ads img {
-    /* position: absolute; */
+} */
+.ads__mobile img {
     max-width: 100%;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(12.5%, -50%); */
-    /* object-fit: cover;     */
+    border-radius: 1em;
 }
 .cards {
     display: grid;
@@ -116,66 +96,17 @@ main {
     .container>* {
         padding: 0 30px;
     }
-    /* .container header, footer { */
-        /* padding: 0 20px; */
-    /* } */
-    /* .container main { */
-        /* padding: 0 20px; */
-    /* } */
-
-    
-    /* .promotion__card {
-        display: none;
-    }
-    .promotion__card__mobile {
-        display: flex;
-    }
-    .container .footer__container {
-        display: flex;
-        justify-content: center;
-    }
-    .container footer .footer__group {
-        display: none;
-    }
-   .container footer .footer__mobile__network {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: -1.5em;
-    }
-    .container footer .socialnetwork {
-        width: 200px;
-    }
-    .container footer .logo {
-        display: none;
-    }
-    .container footer .footer__mobile__copyright {
-        display: flex;
-        margin: 1em;
-    } */
 }
 /* 2 */
 @media (max-width: 768px) {
-    /* .container>* {
-        padding: 0 px;
-    } */
-    /* .container {
-        grid-template-rows: 330px auto 250px;
-    } */
-    /* body {
-        font-size: 0.8em;
-    } */
     .cards {
         grid-template-columns: repeat(2, 1fr);
-        /* grid-template-rows: 100px; */
-        /* padding: 5em; */
         font-size: 2em;
         margin: 0 2em 0;
     }
     .card .add__cart button {
-        width: 15em;
-        height: 4.5em;
+        width: 10em;
+        height: 3em;
         border-radius: 1em;
         border: none;
         background-color: coral;
@@ -183,26 +114,21 @@ main {
         font-size: 0.8em;
     }
     .ads__mobile {
-        display: flex;
-        /* padding: 2em; */
-    }
-    .ads {
+        /* display: flex; */
         grid-template-columns: repeat(2, 1fr);
     }
-   .ads img {
+    /* .ads {
+        grid-template-columns: repeat(2, 1fr);
+    } */
+   /* .ads img {
         max-width: 100%;
-        /* position: absolute; */
-        /* top: 50%; */
-        /* left: 50%; */
-        /* transform: translate(12.5%, -50%); */
-        /* object-fit: cover;     */
-}
-
+} */
 }
 /* 1 and Footer*/
 @media (max-width: 480px) {
     .container {
-        grid-template-rows: 300px auto 350px;
+        grid-template-rows: 300px auto 300px;
+        /* font-size: 1.0em; */
     }
     .cards {
         grid-template-columns: repeat(1, 1fr);
@@ -215,34 +141,36 @@ main {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        font-size: 1.8em;
-        gap:2em
+        font-size: 1.2em;
+        /* gap: 2em */
     }
     .container footer .footer__group {
         display: none;
     }
-    .container footer .footer__mobile {
+    .footer__mobile {
         /* width: 100%; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        align-items: center;
+        /* margin-top: -1.5em; */
+    }
+    .footer__contacts h3 {
+        text-align: center;
+    }
+    /* .contacts {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        margin-top: -1.5em;
-    }
-    .container footer .footer__mobile .footer__contacts .contacts {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer__socialnetwork {
-        display: flex;
-        justify-content: space-between;
-        font-size: 2em;
-        gap: 1em
-    }
-    .card {
-        font-size: 2em;
-    }
+    } */
+    /* .footer__socialnetwork { */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* font-size: 2em; */
+        /* gap: 1em */
+    /* } */
+    /* .card { */
+        /* font-size: 2em; */
+    /* } */
     .card .add__cart button {
         width: 15em;
         height: 4.5em;
@@ -250,40 +178,32 @@ main {
         border: none;
         background-color: coral;
         color: #fff;
-        font-size: 0.8em;
-    }
-    .ad {
-        display: none;
-    }
-    /* .ads {
-        justify-content: center;
-    } */
-    .ads__mobile {
-        display: flex;
-        padding: 2em;
+        /* font-size: 0.8em; */
     }
     .ads {
+        display: none;
+    }
+    .ads__mobile {
+        /* display: flex; */
+        padding: 2em;
         grid-template-columns: repeat(1, 1fr);
     }
-   .ads img {
-        max-width: 100%;
-        /* position: absolute; */
-        /* top: 50%; */
-        /* left: 50%; */
-        /* transform: translate(12.5%, -50%); */
-        /* object-fit: cover;     */
-}
-
+    /* .ads {
+        grid-template-columns: repeat(1, 1fr);
+    } */
+   /* .ads img { */
+        /* max-width: 100%; */
+    /* } */
 }
 /* 1 */
-/* @media (max-width: 320px) {
-    body {
+@media (max-width: 320px) {
+    /* body {
         font-size: 0.6em;
-    }
+    } */
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
-} */
+}
 @font-face {
     font-family: "ArtegraSoft-Black";
     src: url("./templates/Fonts/ArtegraSoft-Black.ttf");

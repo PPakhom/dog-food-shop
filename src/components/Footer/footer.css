@@ -6,8 +6,9 @@ footer {
     color: #fff;
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
     /* padding: 2em 1em; */
+    /* font-size: 1em; */
 }
-.footer__group {
+.footer__group, .footer__mobile {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,17 +21,19 @@ footer {
 .footer__contacts {
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
-.footer__contacts .contacts {
+.footer__contacts h3 {
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    /* font-size: 1em; */
+    line-height: 3em;
+    /* margin-bottom: -2em; */
+    margin: -0.2em 0;
 }
 .footer__socialnetwork {
     display: flex;
     justify-content: space-between;
-    font-size: 2em;
-    gap: 0.5em;
+    /* font-size: 2em; */
+    gap: 1em;
 }
 /* .footer__mobile__copyright {
     display: none;

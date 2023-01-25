@@ -13,7 +13,7 @@ export default () => {
                                 <img src={Logo} alt="DogFood"/>
                             </a>
                     </div>
-                    <div className="footer__copyright">© "Интернет-магазин DogFood", {year}</div>
+                    <p>© "Интернет-магазин DogFood", {year}</p>
                 </div>
                 <div className="footer__group">
                         <a href="#">Каталог</a>
@@ -27,20 +27,32 @@ export default () => {
                         <a href="#">Обратная связь</a>
                         <a href="#">Контакты</a>
                 </div>
-                <div className="footer__group footer__mobile">
+                <div className="footer__mobile">
                     <div className="footer__contacts">
-                        <div className="contacts">
-                            <p>Мы на связи</p>
-                            <a href="tel:74959999999">+8 (999) 00-00-00</a>
-                        </div>                        
+                        {/* <div className="contacts"> */}
+                        <h3>
+                            Мы на связи<br/>
+                            <a href="tel:74959999999">8 (999) 00-00-00</a>
+                        </h3>
+                        {/* </div>                         */}
                         <a href="mailto:dogfood.ru@gmail.com">dogfood.ru@gmail.com</a>
                     </div>
                     <div className="footer__socialnetwork">
-                        <i className="fa-brands fa-telegram"></i>
-                        <i className="fa-brands fa-skype"></i>
-                        <i className="fa-solid fa-phone-volume"></i>
-                        <i className="fa-brands fa-square-instagram"></i>
-                        <i className="fa-brands fa-vk"></i>
+                        <a className="telegram" href="/" title="Телеграм">
+                            <i className="fa-brands fa-telegram"></i>
+                        </a>
+                        <a className="whatsapp" href="/" title="Whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a className="viber" href="/" title="Viber">
+                            <i class="fa-brands fa-viber"></i>
+                        </a>
+                        <a className="instagram" href="/" title="Инстаграм">
+                            <i className="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a className="vk" href="/" title="ВКонтакте">
+                            <i className="fa-brands fa-vk"></i>
+                        </a>
                     </div>    
                     {/* <div className="footer__mobile__copyright">© "Интернет-магазин DogFood", {year}</div> */}
                 </div>

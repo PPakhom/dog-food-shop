@@ -16,21 +16,25 @@
     /* align-items: center; */
     font-family: 'Commissioner', Arial, Helvetica, sans-serif;
     background-color: #fff;
+    font-size: 2em;
 }
 .card:hover {
     box-shadow: 0 0 25px #2226;
 }
-.card__heart>i>svg {
+.card__heart {
     position: absolute;
     top: 0.4em;
     right: 0.7em;
-    width: 30px;
+    width: 1em;
     fill: crimson;
 }
 .discount {
     position: absolute;
     top: 0.5em;
     left: 1em;
+    width: 2.3em;
+    font-size: 0.7em;
+    text-align: center;
     display: block;
     background-color: #cc4646;
     border-radius: 0.5em;
@@ -39,6 +43,7 @@
 }
 .card img {
     max-width: 100%;
+    margin: 1em;
 }
 .price {
     font-size: 0.7em;

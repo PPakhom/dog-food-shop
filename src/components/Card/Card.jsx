@@ -18,8 +18,8 @@ export default ({text, like}) => {
                     like
                     // ? <i className="fa-solid fa-heart"></i>
                     // : <i className="fa-regular fa-heart"></i>
-                    ? <i><Icon_heart_solid/></i>
-                    : <i><Icon_heart_regular/></i>
+                    ? <Icon_heart_solid/>
+                    : <Icon_heart_regular/>
                 }
             </span>
     

@@ -5,12 +5,14 @@ header {
     background-color:coral;
     color: #fff;
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
 }
 .header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 2em;
+    /* font-size: 1.2em; */
 }
 .header__bottom {
     display: flex;
@@ -19,15 +21,15 @@ header {
     margin: 0.5em 0 0 4.2em;
 }
 .header__bottom h2 {
-    width: 300px;
+    /* width: 300px; */
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    /* font-size: 2em; */
     line-height: 1.2em;
     margin: -0.2em 0;
 }
 .header__bottom p {
-    width: 330px;
-    font-size: 1em;
+    /* width: 330px; */
+    /* font-size: 1em; */
     line-height: 1.2em;
     /* margin-top: -2em; */
 }
