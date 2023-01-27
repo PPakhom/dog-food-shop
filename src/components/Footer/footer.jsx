@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
-import Logo from "../../templates/Icons/logo-dogfood.svg";
+// import Logo from "../../templates/Icons/logo-dogfood.svg";
+import {ReactComponent as Logo} from "../../templates/Icons/logo-dogfood.svg";
 
 export default () => {
     const year = new Date().getFullYear();
@@ -9,9 +10,15 @@ export default () => {
             {/* <div className="footer__container"> */}
                 <div className="footer__mobile">
                     <div className="footer__group">
-                            <a className="logo" href="/" title="Магазин корма для собак">
-                                <img src={Logo} alt="DogFood"/>
+                        {/* <a className="logo" href="/" title="Магазин корма для собак">
+                            <img src={Logo} alt="DogFood"/>
+                        </a> */}
+                        <span className="logo">
+                            <a className="logo__icon" href="/" title="Магазин корма для собак">
+                            {/* <img src={Logo} alt="Логотип DogFood"/> */}
+                            <Logo/>
                             </a>
+                        </span>
                     </div>
                     <p>© "Интернет-магазин DogFood", {year}</p>
                 </div>

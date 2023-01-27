@@ -6,7 +6,8 @@ footer {
     color: #fff;
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
     /* padding: 2em 1em; */
-    /* font-size: 1em; */
+    font-size: 0.9em;
+    /* gap: 0.5em; */
 }
 .footer__group, .footer__mobile {
     display: flex;
@@ -14,9 +15,16 @@ footer {
     justify-content: space-between;
     gap: 1em;
 }
-.logo {
+/* .logo {
     width: 120px;
     max-width: 120px;
+} */
+.logo>a>svg {
+    /* width: 120px; */
+    /* max-width: 120px; */
+    /* max-width: 100%; */
+    width: 6em;
+    /* height: 4em; */
 }
 .footer__contacts {
     display: flex;

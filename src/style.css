@@ -8,11 +8,11 @@ a {
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 330px auto 200px;
+    grid-template-rows: 18em auto 12em;
     font-size: 1.1em;
 }
 .container>* {
-    padding: 0 calc(50% - 600px);
+    padding: 0 calc(50% - 30em);
 }
 main {
     background-image: url("./templates/Images/bg-dogfood-dogpaw.png");
@@ -22,52 +22,81 @@ main {
 .main-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
     /* padding: 0 calc(50% - 600px); */
-    margin: -2em auto 1em;
+    margin: -3em 2em 1em;
 }
-.ad-banner  {
+.ad-banner {
     position: relative;
+    /* max-width: 100%; */
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: gold;
     border-radius: 1em;
-    margin: 0 2em 1em;
-    padding: 0 2em;;
-    gap: 1em;
+    margin-bottom: 1em;
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
-    font-size: 1.8em;
+    /* font-size: 1.5em; */
+    overflow: hidden;
+    /* gap: 4em; */
 }
+.ad-banner__text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2em;
+}
+
+/*.ad-banner h2 {
+    /* font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif; */
+    /* margin-left: 2em; */
+/*}*/
 .ad-banner p {
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
     /* font-size: 0.9em; */
 }
 .ad-banner__img {
-    background-size: cover;
-    width: 550px;
-    height: 350px;
+    /* background-size: cover; */
+    /* width: 550px; */
+    /* height: 350px; */
+    /* width: 100%; */
+    /* height: 350px; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: -6em;
+    margin-right: -2em;
+    /* overflow: hidden; */
     z-index: 1;
+    /* width: 50%; */
+    max-width: 60%;
+}
+.ad-banner__img img {
+    max-width: 60%;
+    /* width: 50%; */
+    /* border-radius: 1em; */
 }
 .ad-banner__proc {
     position: absolute;
-    width: 0.8em;
-    height: 0.6em;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content:flex-start;
+    /* width: 0.8em;
+    height: 0.6em; */
+    top: -0.4em;
+    right: -0.1em;
+    /* display: flex; */
+    /* justify-content:flex-start; */
     align-items: center;
-    font-size: 14em;
+    font-size: 15em;
     color: coral;
     opacity: 0.5;
-    overflow: hidden;
-    padding-bottom: 0.05em;
+    /* overflow: hidden; */
+    /* padding-bottom: 0.05em; */
     z-index: 0;
 }
 .ads__mobile {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 1em 4em;
+    margin: 1em 0;
     gap: 1em;
 }
 .ad {
@@ -84,35 +113,49 @@ main {
 .ads__mobile img {
     max-width: 100%;
     border-radius: 1em;
+    height: 100%;
 }
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
-    margin: 0 4em 0;
+    /* margin: 0 4em 0; */
 }
 /* 3 */
 @media (max-width: 1260px) {
+    .container {
+        min-height: 100vh;
+        display: grid;
+        /* grid-template-rows: 17em auto 12em; */
+        /* font-size: 0.8em; */
+    }
     .container>* {
-        padding: 0 30px;
+        /* grid-template-rows: 16em auto 12em; */
+        padding: 0 0.5em;
+        /* font-size: 0.95em; */
     }
 }
 /* 2 */
 @media (max-width: 768px) {
+    .container {
+        /* grid-template-rows: 450px auto 300px; */
+        font-size: 0.9em;
+    }
     .cards {
         grid-template-columns: repeat(2, 1fr);
-        font-size: 2em;
-        margin: 0 2em 0;
+        /* font-size: 2em; */
+        /* margin: 0 2em 0; */
     }
-    .card .add__cart button {
-        width: 10em;
-        height: 3em;
-        border-radius: 1em;
-        border: none;
-        background-color: coral;
-        color: #fff;
-        font-size: 0.8em;
-    }
+    /*.card .add__cart button {
+        /* width: 10em; */
+        /* height: 3em; */
+        /* width: 100%; */
+        /* border-radius: 1em; */
+        /* border: none; */
+        /* background-color: coral; */
+        /* color: #fff; */
+        /* font-size: 0.8em; */
+    /*}*/
     .ads__mobile {
         /* display: flex; */
         grid-template-columns: repeat(2, 1fr);
@@ -125,23 +168,29 @@ main {
 } */
 }
 /* 1 and Footer*/
-@media (max-width: 480px) {
+@media (max-width: 650px) {
     .container {
-        grid-template-rows: 300px auto 300px;
-        /* font-size: 1.0em; */
+        grid-template-rows: 17em auto 12em;
+        font-size: 0.75em;
     }
+    /*.header__top {
+        /* font-size: 1.3em; */
+    /*}*/
     .cards {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    .container header {
-        font-size: 1em;
-    }
+    /*.container header {
+        /* font-size: 1.5em; */
+    /*}
+    .container header .header__top {
+        /* font-size: 1.5em; */
+    /*}*/
     .container footer {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        font-size: 1.2em;
+        /* font-size: 1.2em; */
         /* gap: 2em */
     }
     .container footer .footer__group {
@@ -185,7 +234,7 @@ main {
     }
     .ads__mobile {
         /* display: flex; */
-        padding: 2em;
+        /* padding: 2em; */
         grid-template-columns: repeat(1, 1fr);
     }
     /* .ads {
@@ -196,11 +245,42 @@ main {
     /* } */
 }
 /* 1 */
-@media (max-width: 320px) {
-    /* body {
-        font-size: 0.6em;
-    } */
+@media (max-width: 480px) {
+    .container {
+        grid-template-rows: 17em auto 12em;
+        font-size: 0.55em;
+        /* font-size: 2.5em; */
+    }
     .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        font-size: 3em;
+    }
+    .card__img {
+        padding: 2em;
+    }
+    /* .card img {
+        max-width: 50%;
+    } */
+}
+/* 1 */
+@media (max-width: 400px) {
+    .container {
+        font-size: 0.45em;
+    }
+}
+/* 1 */
+@media (max-width: 320px) {
+    .container {
+        font-size: 0.4em;
+    }
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ads__mobile {
+        /* display: flex; */
+        /* padding: 2em; */
         grid-template-columns: repeat(1, 1fr);
     }
 }

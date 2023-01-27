@@ -24,7 +24,7 @@ export default ({text, like}) => {
             </span>
     
             {(text.discount > 0) && <span className="discount">{`-${text.discount}%`}</span>}
-            {(text.pictures) && <img src={text.pictures} alt="Изображение товара"/>}
+            {(text.pictures) && <div className="card__img"><img src={text.pictures} alt="Изображение товара"/></div>}
             {
                 text.discount > 0
                     ? <span className="price">{text.price} ₽</span>

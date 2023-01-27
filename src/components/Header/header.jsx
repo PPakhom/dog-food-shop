@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import Search from "../Search/Search"
 import "./header.css";
-import Logo from "../../templates/Icons/logo-dogfood.svg";
-// import {ReactComponent as Logo} from "../../templates/Icons/logo-dogfood.svg";
+// import Logo from "../../templates/Icons/logo-dogfood.svg";
+import {ReactComponent as Logo} from "../../templates/Icons/logo-dogfood.svg";
 import {ReactComponent as Favorites} from "../../templates/Icons/ic-favorites.svg";
 import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
 // import {ReactComponent as Logo} from "../../templates/images/logo-dogfood1.svg";
@@ -28,10 +28,12 @@ export default ({user, setUser, products}) => {
     return (
         <header>
             <div className="header__top">
-                <a className="logo" href="/" title="Магазин корма для собак">
-                    <img src={Logo} alt="Логотип DogFood"/>
-                    {/* <Logo/> */}
-                </a>
+                <span className="logo">
+                    <a className="logo__icon" href="/" title="Магазин корма для собак">
+                        {/* <img src={Logo} alt="Логотип DogFood"/> */}
+                        <Logo/>
+                    </a>
+                </span>
                 <div className="header__catalog" href=""><button><i className="fa-solid fa-list"></i>Каталог</button></div>
                 <Search data={products}/>
                 {/* <input type="search" placeholder="Поиск..." className="search"/> */}
@@ -40,16 +42,18 @@ export default ({user, setUser, products}) => {
                         <Cart/>
                     </a>        
                 </div> */}
-                <span className="favorites">
+                <div className="header__icons">
+                <div className="favorites">
                     <a className="favorites__icon" href="">
                         <Favorites/>
                     </a>        
-                </span>
-                <span className="cart">
+                </div>
+                <div className="cart">
                     <a className="cart__icon" href="">
                         <Cart/>
                     </a>
-                </span>        
+                </div>        
+                </div>
                 <nav className="menu">
                     {/* true && true */}
                     {user && <a href="">{user}</a>}

@@ -10,14 +10,16 @@ export default ({data}) => {
     return (
         <div className="main-page">
             <div className="ad-banner">
-                <div>
+                <div className="ad-banner__text">
                     <h2>Подарок за<br/>первый заказ!</h2>
                     <p>Сухой корм для собак</p>
                 </div>
                 {/* <div className="ad-banner__pic" style={{ backgroundImage: `url(${Image})`}}></div> */}
-                <div className="ad-banner__img" style={{ backgroundImage: `url(${AdBannerImage})`}}></div>
-                {/* <img className="ad-banner__img" src={AdBannerImage} /> */}
+                {/* <div className="ad-banner__img" style={{ backgroundImage: `url(${AdBannerImage})`}}></div> */}
+                {/* <div className="ad-banner__pic"> */}
+                <div className="ad-banner__img"><img src={AdBannerImage} alt="Приветственный банер"/></div>
                 <div className="ad-banner__proc">%</div>
+            {/* </div> */}
             </div>
      
             <div className="cards">
