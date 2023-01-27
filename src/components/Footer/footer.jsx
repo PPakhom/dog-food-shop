@@ -49,10 +49,10 @@ export default () => {
                             <i className="fa-brands fa-telegram"></i>
                         </a>
                         <a className="whatsapp" href="/" title="Whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <i className="fa-brands fa-whatsapp"></i>
                         </a>
                         <a className="viber" href="/" title="Viber">
-                            <i class="fa-brands fa-viber"></i>
+                            <i className="fa-brands fa-viber"></i>
                         </a>
                         <a className="instagram" href="/" title="Инстаграм">
                             <i className="fa-brands fa-square-instagram"></i>

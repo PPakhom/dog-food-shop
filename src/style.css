@@ -255,7 +255,7 @@ main {
         grid-template-columns: repeat(1, 1fr);
     }
     .card {
-        font-size: 3em;
+        font-size: 2em;
     }
     .card__img {
         padding: 2em;
