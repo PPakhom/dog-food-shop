@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.b97d985c.css",
-    "main.js": "./static/js/main.1d0aa12f.js",
+    "main.css": "./static/css/main.beb9c9c5.css",
+    "main.js": "./static/js/main.0b28b705.js",
+    "static/media/ad22.png": "./static/media/ad22.08d569262df259ea86b5.png",
+    "static/media/ad21.png": "./static/media/ad21.82bc06af7c389f002900.png",
+    "static/media/dry-dog-food.png": "./static/media/dry-dog-food.67803257c88d9e654bf1.png",
     "static/media/ArtegraSoft-Black.ttf": "./static/media/ArtegraSoft-Black.e7784737638c71f503c3.ttf",
-    "static/media/training-set.jpg": "./static/media/training-set.fbdfb20d0fac7bbc4b8d.jpg",
     "static/media/ArtegraSoft-Regular.ttf": "./static/media/ArtegraSoft-Regular.dedb65bfc3e338cba763.ttf",
-    "static/media/reindeer-antlers.jpg": "./static/media/reindeer-antlers.d276520a0e3f967ba585.jpg",
     "static/media/bg-dogfood-dogpaw.png": "./static/media/bg-dogfood-dogpaw.b73ff8ec4add43e361fd.png",
-    "static/media/dry-dog-food.png": "./static/media/dry-dog-food.c6fd34ab9d511629ffd2.png",
     "static/media/logo-dogfood.svg": "./static/media/logo-dogfood.6cd3aece2acea038aa50c3eb15e082ab.svg",
     "static/media/heartpaw-regular.svg": "./static/media/heartpaw-regular.292d8b7a17eea0cd3a35e6ff91fa2c80.svg",
+    "static/media/bone-close.svg": "./static/media/bone-close.35dea6197402fca25189390315013b7f.svg",
     "static/media/heartpaw-solid.svg": "./static/media/heartpaw-solid.c37a401d226487c50256462a2e00bea3.svg",
     "index.html": "./index.html",
     "static/media/circle-xmark-regular.svg": "./static/media/circle-xmark-regular.8ef6e0a127f37e5c70a1e4bb4cb92f32.svg",
     "static/media/ic-favorites.svg": "./static/media/ic-favorites.eb441df174ebe11ea363f0bffa4f0c1c.svg",
     "static/media/magnifying-glass-solid.svg": "./static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
     "static/media/ic-cart.svg": "./static/media/ic-cart.9c313428b16ea58eb7be66a872c2f818.svg",
-    "main.b97d985c.css.map": "./static/css/main.b97d985c.css.map",
-    "main.1d0aa12f.js.map": "./static/js/main.1d0aa12f.js.map"
+    "main.beb9c9c5.css.map": "./static/css/main.beb9c9c5.css.map",
+    "main.0b28b705.js.map": "./static/js/main.0b28b705.js.map"
   },
   "entrypoints": [
-    "static/css/main.b97d985c.css",
-    "static/js/main.1d0aa12f.js"
+    "static/css/main.beb9c9c5.css",
+    "static/js/main.0b28b705.js"
   ]
 }

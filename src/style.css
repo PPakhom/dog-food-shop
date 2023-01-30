@@ -28,8 +28,10 @@ main {
 }
 .ads {
     width: 100%;
+    /* height: 12em; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    grid-template-rows: repeat(1, minmax(12em, 1fr));
     border-radius: 1em;
     margin: 1em 0;
     gap: 1em;
@@ -38,7 +40,7 @@ main {
 }
 .ad {
     position: relative;
-    height: 100%;
+    /* height: 12em; */
     background-color: gold;
     border-radius: 1em;
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
@@ -61,8 +63,10 @@ main {
 }
 .ad img {
     position: absolute;
-    width: 40%;
-    border-radius: 1em;
+    /* width: 50%; */
+    /* min-width: 50%; */
+    height: 100%;
+    /* border-radius: 1em; */
     top: 0em;
     right: 3em;
     z-index: 1;
@@ -88,7 +92,13 @@ main {
         /* font-size: 1em; */
     }
     .container>* {
-        padding: 0 0.5em;
+        /* padding: 0 0.5em; */
+    }
+}
+/*  ads */ 
+@media (max-width: 998px) {
+    .ads {
+        font-size: 0.75em;
     }
 }
 /* 2 */
@@ -104,7 +114,7 @@ main {
 @media (max-width: 720px) {
     .container {
         grid-template-rows: 17em auto 12em;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .cards {
         grid-template-columns: repeat(2, 1fr);
@@ -132,7 +142,8 @@ main {
         background-color: coral;
         color: #fff;
     }
-    /* .ads { */
+}
+@media (max-width: 650px) {
     .mobile-none {
         display: none;
     }
@@ -152,21 +163,28 @@ main {
     .card__img {
         padding: 2em;
     }
+    .ads {
+        font-size: 1.6em;
+    }
 }
 /* 1 */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .container {
         font-size: 0.45em;
     }
 }
 /* 1 */
-@media (max-width: 320px) {
+@media (max-width: 350px) {
     .container {
         font-size: 0.4em;
     }
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
+    .ads {
+        font-size: 1.5em;
+    }
+
 }
 @font-face {
     font-family: "ArtegraSoft-Black";
