@@ -7,18 +7,21 @@ import {ReactComponent as Favorites} from "../../templates/Icons/ic-favorites.sv
 import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
 // import {ReactComponent as Logo} from "../../templates/images/logo-dogfood1.svg";
 
-export default ({user, setUser, products}) => {
+export default ({user, setUser, products, setModalActive}) => {
     // хук состояние [свойство, функция, в качестве аргумента которой передаётся новое значение свойства] = useState(аргумента - изначальное значение свойства)
     // const [user, setUser] = useState(localStorage.getItem("user8"));
 
     // let user = localStorage.getItem("user8");
     const logIn = (e) => {
         e.preventDefault();
-        let name = prompt("Как вас ховут?");
+// тут
+        let name = prompt("Как вас зовут?");
         if (name) {
             localStorage.setItem("user8", name);
             setUser(name);
         }
+// конец        
+        // setModalActive(prev => !prev);
     }
     const logOut = (e) => {
         e.preventDefault();
@@ -55,7 +58,6 @@ export default ({user, setUser, products}) => {
                 </div>        
                 </div>
                 <nav className="menu">
-                    {/* true && true */}
                     {user && <a href="">{user}</a>}
                     {!user && <a href="" onClick={logIn}>Войти</a>}
                     {user && <a href="" onClick={logOut}>Выйти</a>}

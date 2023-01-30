@@ -1,25 +1,47 @@
 import React from "react";
 import Card from "../components/Card/Card";
 import AdBannerImage from "../templates/Images/dry-dog-food.png"
-import AdCard1 from "../templates/Images/reindeer-antlers.jpg"
-import AdCard2 from "../templates/Images/training-set.jpg"
-// import Promotion1 from "../templates/Images/reindeer-antlers.jpg"
-// import Promotion2 from "../templates/Images/training-set.jpg"
+import AdCard1 from "../templates/Images/ad21.png"
+import AdCard2 from "../templates/Images/ad22.png"
+
+import Ads from "../components/Ads/Ads";
 
 export default ({data}) => {
+    const dataAds = [
+        {
+            className: "ad",
+            text1: `Подарок за\nпервый заказ!`,
+            text2: "Сухой корм для собак",
+            picture: String(AdBannerImage),
+            alt: "Приветственный банер",
+            symbol: "%"
+        },
+        {
+            className: "ad",
+            text1: `Рога\nсеверного\nоленя`,
+            text2: "от 10 до 30 кг",
+            picture: String(AdCard1),
+            alt: "Реклама 1",
+            symbol: ""
+        },
+        {
+            className: "ad mobile-none",
+            text1: `Печенья\nс яблоком\n`,
+            text2: "от 340 ₽",
+            picture: String(AdCard2),
+            alt: "Реклама 2",
+            symbol: ""
+        }
+    ];
+
     return (
         <div className="main-page">
-            <div className="ad-banner">
-                <div className="ad-banner__text">
-                    <h2>Подарок за<br/>первый заказ!</h2>
-                    <p>Сухой корм для собак</p>
-                </div>
-                {/* <div className="ad-banner__pic" style={{ backgroundImage: `url(${Image})`}}></div> */}
-                {/* <div className="ad-banner__img" style={{ backgroundImage: `url(${AdBannerImage})`}}></div> */}
-                {/* <div className="ad-banner__pic"> */}
-                <div className="ad-banner__img"><img src={AdBannerImage} alt="Приветственный банер"/></div>
-                <div className="ad-banner__proc">%</div>
-            {/* </div> */}
+            <div className="ads">
+                {dataAds.map((el, i) => {
+                    return <>
+                        {(i === 0 ) && <Ads key={"ads_" + i} data={el}/>}
+                    </>    
+                })}
             </div>
      
             <div className="cards">
@@ -30,25 +52,13 @@ export default ({data}) => {
                 })}
             </div>
      
-            {/* <div className="ads">
-                <div className="ad ads__mobile" style={{ backgroundImage: `url(${AdCard1})`}}></div>    
-                <div className="ad" style={{ backgroundImage: `url(${AdCard2})`}}></div>
-            </div> */}
-
-            <div className="ads__mobile">
-                <div className="ad"><img src={AdCard1} alt="Реклама 1"/></div>
-                <div className="ads">
-                    <div className="ad"><img src={AdCard2} alt="Реклама 2"/></div>
-                </div>
+            <div className="ads">
+                {dataAds.map((el, i) => {
+                    return <>
+                        {(i > 0 && i <3) && <Ads key={"ads_" + i} data={el}/>}
+                    </>    
+                })}
             </div>
-
-
-
-
-            {/* <div className="promotion">
-                <div className="promotion__card promotion__card__mobile" style={{ backgroundImage: `url(${Promotion1})`}}></div>    
-                <div className="promotion__card" style={{ backgroundImage: `url(${Promotion2})`}}></div>
-            </div> */}
     
             <div className="cards">
                 {data.map((el, i) => {

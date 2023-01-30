@@ -1,0 +1,77 @@
+.modal-container {
+    position: fixed;
+    background-color: #2228;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+.modal {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #0006, 0 0 8px #0004;
+    display: grid;
+    gap: 20px;
+    position: relative;
+}
+.modal h2 {
+    margin: 0;
+    text-align: center;
+}
+.modal-close {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+    padding: 3px;
+}
+.modal-close:hover {
+    background-color: rgb(243, 231, 5);
+}
+form {
+    display: grid;
+    gap: 0.5em;
+}
+input {
+    flex: 1;
+    /* height: 30px; */
+    /* width: 100%; */
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    border: 0.1em solid silver;
+    /* font-size: 16px; */
+    font-size: 1em;
+    outline: none;
+    /* padding: 6px 12px; */
+    padding: 0.3em 0.5em;
+}
+input:focus {
+    border-color: rgb(243, 231, 5);
+}
+button.btn {
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    background-color: coral;
+    font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
+}
+button.link {
+    background-color: tranparent;
+    border: 1px solid coral;
+    box-sizing: border-box;
+}
