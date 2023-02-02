@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.beb9c9c5.css",
-    "main.js": "./static/js/main.0b28b705.js",
+    "main.js": "./static/js/main.e594d684.js",
     "static/media/ad22.png": "./static/media/ad22.08d569262df259ea86b5.png",
     "static/media/ad21.png": "./static/media/ad21.82bc06af7c389f002900.png",
     "static/media/dry-dog-food.png": "./static/media/dry-dog-food.67803257c88d9e654bf1.png",
@@ -18,10 +18,10 @@
     "static/media/magnifying-glass-solid.svg": "./static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
     "static/media/ic-cart.svg": "./static/media/ic-cart.9c313428b16ea58eb7be66a872c2f818.svg",
     "main.beb9c9c5.css.map": "./static/css/main.beb9c9c5.css.map",
-    "main.0b28b705.js.map": "./static/js/main.0b28b705.js.map"
+    "main.e594d684.js.map": "./static/js/main.e594d684.js.map"
   },
   "entrypoints": [
     "static/css/main.beb9c9c5.css",
-    "static/js/main.0b28b705.js"
+    "static/js/main.e594d684.js"
   ]
 }

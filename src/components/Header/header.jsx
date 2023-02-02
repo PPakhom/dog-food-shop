@@ -15,13 +15,13 @@ export default ({user, setUser, products, setModalActive}) => {
     const logIn = (e) => {
         e.preventDefault();
 // тут
-        let name = prompt("Как вас зовут?");
-        if (name) {
-            localStorage.setItem("user8", name);
-            setUser(name);
-        }
+        // let name = prompt("Как вас зовут?");
+        // if (name) {
+        //     localStorage.setItem("user8", name);
+        //     setUser(name);
+        // }
 // конец        
-        // setModalActive(prev => !prev);
+        setModalActive(prev => !prev);
     }
     const logOut = (e) => {
         e.preventDefault();
