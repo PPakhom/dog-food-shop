@@ -5,7 +5,7 @@ import {ReactComponent as CloseIcon} from "../../templates/Icons/bone-close.svg"
 import Signup from "./Signup";
 import Login from "./Login";
 
-export default ({isActive, setState, api, setToken}) => {
+export default ({isActive, setState}) => {
     const [auth, setAuth] = useState(true);
     let style = {
         display: isActive && "flex"
