@@ -9,7 +9,7 @@ import {ReactComponent as Favorites} from "../../templates/Icons/ic-favorites.sv
 import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
 
 export default ({goods, searchGoods, setModalActive}) => {
-    const {user, setUser} = useContext(Ctx);
+    const {user, setUser, PATH} = useContext(Ctx);
     const logIn = (e) => {
         e.preventDefault();
         setModalActive(prev => !prev);
@@ -23,12 +23,12 @@ export default ({goods, searchGoods, setModalActive}) => {
         <header>
             <div className="header__top">
                 <span className="logo">
-                    <Link className="logo__icon" to="/" title="Магазин корма для собак">
+                    <Link className="logo__icon" to={PATH} title="Магазин корма для собак">
                         <Logo/>
                     </Link>
                 </span>
                 <div className="header__catalog">
-                    <Link to="/catalog" className="button">Каталог</Link>
+                    <Link to={PATH + "catalog"} className="button">Каталог</Link>
                 </div>
                 <Search data={goods} searchGoods={searchGoods}/>
                 <div className="header__icons">
@@ -44,7 +44,7 @@ export default ({goods, searchGoods, setModalActive}) => {
                 </div>        
                 </div>
                 <nav className="menu">
-                    {user && <Link to="/profile">{user}</Link>}
+                    {user && <Link to={PATH + "profile"}>{user}</Link>}
                     {!user && <a href="" onClick={logIn}>Войти</a>}
                     {/* {user && <a href="" onClick={logOut}>Выйти</a>} */}
                 </nav>

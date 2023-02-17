@@ -16,8 +16,8 @@ import Product from "./pages/Product.jsx";
 import {Api} from "./Api";
 import Ctx from "./Ctx";
 
-const PATH = "/";
-// const PATH = "/dog-food-shop/";
+// const PATH = "/";
+const PATH = "/dog-food-shop/";
 
 const smiles = ["^_^", "=)", "O_o", ";(", "^_0", "@_@", "-_-"];
 
