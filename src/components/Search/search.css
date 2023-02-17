@@ -17,7 +17,7 @@
     font-size: 1em;
     outline: none;
     /* padding: 6px 12px; */
-    padding: 0.3em 0.5em;
+    padding: 0.3em 1.7em 0.3em 0.5em;
 }
 .search-block>input:focus {
     border-color: rgb(243, 231, 5);
@@ -27,10 +27,13 @@
     right: 0;
     background-color: transparent;
     border: none;
-    /* width: 24px; */
+    width: 30px;
+    height: 20px;
+    /* width: 10%; */
     /* height: 20px; */
-    width: 10%;
-    /* height: 20px; */
+}
+.search-block .btn-close {
+    padding-right: 45px;
 }
 .search-block>button>svg {
     height: 100%;

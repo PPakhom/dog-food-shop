@@ -16,9 +16,9 @@ export default ({isActive, setState, api, setToken}) => {
             <h2>{auth ? "Войти" : "Регистрация"}</h2>
             {auth
                 ?
-                <Login change={setAuth} api={api} close={setState} setToken={setToken}/>
+                <Login change={setAuth}close={setState}/>
                 :
-                <Signup change={setAuth} api={api} close={setState} setToken={setToken}/>}
+                <Signup change={setAuth}close={setState}/>}
         </div>
     </div>
 }

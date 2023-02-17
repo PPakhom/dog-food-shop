@@ -186,6 +186,34 @@ main {
     }
 
 }
+
+.empty-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    background-color: #dededeaa;
+    font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
+}
+/* .empty-block>*:not(svg) {
+    font-size: 1rem;
+} */
+.empty-block svg {
+    font-size: 4rem;
+    /* fill: #dedede; */
+    fill: #000;
+}
+.empty-block .btn {
+    border: 2px solid #000;
+    border-radius: 18px;
+    display: flex;
+    padding: 6px 12px;
+}
+.empty-block .btn:hover {
+    background-color: coral;
+}
 @font-face {
     font-family: "ArtegraSoft-Black";
     src: url("./templates/Fonts/ArtegraSoft-Black.ttf");
@@ -193,4 +221,4 @@ main {
 @font-face {
     font-family: "ArtegraSoft-Regular";
     src: url("./templates/Fonts/ArtegraSoft-Regular.ttf");
-  }
+ }

@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.beb9c9c5.css",
-    "main.js": "./static/js/main.e594d684.js",
-    "static/media/ad22.png": "./static/media/ad22.08d569262df259ea86b5.png",
-    "static/media/ad21.png": "./static/media/ad21.82bc06af7c389f002900.png",
-    "static/media/dry-dog-food.png": "./static/media/dry-dog-food.67803257c88d9e654bf1.png",
-    "static/media/ArtegraSoft-Black.ttf": "./static/media/ArtegraSoft-Black.e7784737638c71f503c3.ttf",
-    "static/media/ArtegraSoft-Regular.ttf": "./static/media/ArtegraSoft-Regular.dedb65bfc3e338cba763.ttf",
-    "static/media/bg-dogfood-dogpaw.png": "./static/media/bg-dogfood-dogpaw.b73ff8ec4add43e361fd.png",
-    "static/media/logo-dogfood.svg": "./static/media/logo-dogfood.6cd3aece2acea038aa50c3eb15e082ab.svg",
-    "static/media/heartpaw-regular.svg": "./static/media/heartpaw-regular.292d8b7a17eea0cd3a35e6ff91fa2c80.svg",
-    "static/media/bone-close.svg": "./static/media/bone-close.35dea6197402fca25189390315013b7f.svg",
-    "static/media/heartpaw-solid.svg": "./static/media/heartpaw-solid.c37a401d226487c50256462a2e00bea3.svg",
-    "index.html": "./index.html",
-    "static/media/circle-xmark-regular.svg": "./static/media/circle-xmark-regular.8ef6e0a127f37e5c70a1e4bb4cb92f32.svg",
-    "static/media/ic-favorites.svg": "./static/media/ic-favorites.eb441df174ebe11ea363f0bffa4f0c1c.svg",
-    "static/media/magnifying-glass-solid.svg": "./static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
-    "static/media/ic-cart.svg": "./static/media/ic-cart.9c313428b16ea58eb7be66a872c2f818.svg",
-    "main.beb9c9c5.css.map": "./static/css/main.beb9c9c5.css.map",
-    "main.e594d684.js.map": "./static/js/main.e594d684.js.map"
+    "main.css": "/dog-food-shop/static/css/main.2050198f.css",
+    "main.js": "/dog-food-shop/static/js/main.77fed71c.js",
+    "static/media/ad22.png": "/dog-food-shop/static/media/ad22.08d569262df259ea86b5.png",
+    "static/media/ad21.png": "/dog-food-shop/static/media/ad21.82bc06af7c389f002900.png",
+    "static/media/dry-dog-food.png": "/dog-food-shop/static/media/dry-dog-food.67803257c88d9e654bf1.png",
+    "static/media/ArtegraSoft-Black.ttf": "/dog-food-shop/static/media/ArtegraSoft-Black.e7784737638c71f503c3.ttf",
+    "static/media/ArtegraSoft-Regular.ttf": "/dog-food-shop/static/media/ArtegraSoft-Regular.dedb65bfc3e338cba763.ttf",
+    "static/media/bg-dogfood-dogpaw.png": "/dog-food-shop/static/media/bg-dogfood-dogpaw.b73ff8ec4add43e361fd.png",
+    "static/media/no_photo.png": "/dog-food-shop/static/media/no_photo.64d046cc00092bb03b08.png",
+    "static/media/logo-dogfood.svg": "/dog-food-shop/static/media/logo-dogfood.6cd3aece2acea038aa50c3eb15e082ab.svg",
+    "static/media/heartpaw-regular.svg": "/dog-food-shop/static/media/heartpaw-regular.292d8b7a17eea0cd3a35e6ff91fa2c80.svg",
+    "static/media/bone-close.svg": "/dog-food-shop/static/media/bone-close.35dea6197402fca25189390315013b7f.svg",
+    "index.html": "/dog-food-shop/index.html",
+    "static/media/heartpaw-solid.svg": "/dog-food-shop/static/media/heartpaw-solid.c37a401d226487c50256462a2e00bea3.svg",
+    "static/media/circle-xmark-regular.svg": "/dog-food-shop/static/media/circle-xmark-regular.8ef6e0a127f37e5c70a1e4bb4cb92f32.svg",
+    "static/media/ic-favorites.svg": "/dog-food-shop/static/media/ic-favorites.eb441df174ebe11ea363f0bffa4f0c1c.svg",
+    "static/media/magnifying-glass-solid.svg": "/dog-food-shop/static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
+    "static/media/ic-cart.svg": "/dog-food-shop/static/media/ic-cart.9c313428b16ea58eb7be66a872c2f818.svg",
+    "main.2050198f.css.map": "/dog-food-shop/static/css/main.2050198f.css.map",
+    "main.77fed71c.js.map": "/dog-food-shop/static/js/main.77fed71c.js.map"
   },
   "entrypoints": [
-    "static/css/main.beb9c9c5.css",
-    "static/js/main.e594d684.js"
+    "static/css/main.2050198f.css",
+    "static/js/main.77fed71c.js"
   ]
 }

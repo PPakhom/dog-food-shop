@@ -39,7 +39,7 @@ export default () => {
                         {/* <div className="contacts"> */}
                         <h3>
                             Мы на связи<br/>
-                            <a href="tel:74959999999">8 (999) 00-00-00</a>
+                            <a href="tel:74950000000">+7 (495) 000-00-00</a>
                         </h3>
                         {/* </div>                         */}
                         <a href="mailto:dogfood.ru@gmail.com">dogfood.ru@gmail.com</a>

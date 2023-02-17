@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import Ctx from "../../Ctx";
 
-export default ({change, api, close, setToken}) => {
+export default ({change, close}) => {
     const [inp1, setInp1] = useState("");
     const [inp2, setInp2] = useState("");
     const [inp3, setInp3] = useState("");
     const [testPwd, setTestPwd] = useState(true);
+    const {setToken, api, setUser} = useContext(Ctx);
 
     const checkPwd = (val, type="main") => {
         type === "main" ? setInp2(val) : setInp3(val);
@@ -27,7 +29,7 @@ export default ({change, api, close, setToken}) => {
         api.signUp(body)
             .then(res => res.json())
             .then(data => {
-                console.log(data.err);
+                // console.log(data.err);
                 if (!data.err) {
                     api.signIn(body)
                         .then(res => res.json())
@@ -35,6 +37,7 @@ export default ({change, api, close, setToken}) => {
                             localStorage.setItem("user8", data.data.name);
                             localStorage.setItem("token8", data.token);
                             setToken(data.token);
+                            setUser(data.data.name);
                         })
                     setInp1("");
                     setInp2("");
