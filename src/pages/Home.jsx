@@ -87,15 +87,6 @@ export default ({data}) => {
                         })}
                     </div>
 
-
-
-            {/* <div className="cards">
-                {data.map((el, i) => {
-                    return <>
-                        {(i > 5 && i < 12 ) && <Card key={"card_" + i} data={el} like={(i + 1) % 2 === 0} flagHome={flagHome}/>}
-                    </>    
-                })}
-            </div> */}
             <div className="ads">
                 {dataAds.map((el, i) => {
                     return <>
