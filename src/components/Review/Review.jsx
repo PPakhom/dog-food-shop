@@ -9,7 +9,7 @@ import { Trash3 } from "react-bootstrap-icons";
 import { dayMonthYearToString } from "../../assets/functions";
 
 export default ({rating, _id, text, author, product, created_at, setProduct}) => {
-    const { api, user, setGoods, setVisibleGoods, PATH } = useContext(Ctx);
+    const { api, user, setGoods, PATH } = useContext(Ctx);
     const [name, setName] = useState("");
     const [avatar, setAvatar] = useState("");
     const navigate = useNavigate();
@@ -45,7 +45,6 @@ export default ({rating, _id, text, author, product, created_at, setProduct}) =>
                 <div className="review__user-block">
                     <div className="user-name-rating">
                         <div>{name || ""}</div>
-                        {/* <div className="rating__star">{setRating(rating)}</div> */}
                         <div className="rating">
                             <StarFill className="rating__star"/>
                             <div>{`${ rating }`}</div>

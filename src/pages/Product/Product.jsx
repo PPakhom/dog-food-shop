@@ -240,7 +240,8 @@ export default () => {
             <AddReview id={id} setProduct={setProduct} />
 
             <div className="reviews">
-                {product.reviews && product.reviews.length > 0 && product.reviews.map((el, i) => <Review {...el} setProduct={setProduct} key={i}/>)}
+                {/* {product.reviews && product.reviews.length > 0 && product.reviews.map((el, i) => <Review {...el} setProduct={setProduct} key={i}/>)} */}
+                {product.reviews && product.reviews.length > 0 && product.reviews.map((el, i) => <Review {...el} setProduct={setProduct} key={i}/>).reverse()}
             </div>
             <Confirmation show={show} setShow={setShow} setDelete={setDelete}/>
         </div>
