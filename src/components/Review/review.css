@@ -1,0 +1,37 @@
+.review-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.review-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-bottom: 4px solid rgb(255, 248, 235);
+    margin: 1em 1em;
+    padding-bottom: 1em;
+}
+.btn-block {
+    position: absolute;
+    top: 0;
+    right: 1em;
+}
+.review-top {
+    display: flex;
+    gap: 1em
+}
+.review__user-avatar {
+    height: 60px;
+    width: 60px;
+}
+.review__user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+}
+.user-name-rating {
+    display: flex;
+    gap: 1em;
+}

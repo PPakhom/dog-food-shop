@@ -21,6 +21,8 @@
     display: grid;
     gap: 20px;
     position: relative;
+    height: auto;
+    overflow: visible;
 }
 .modal h2 {
     margin: 0;
@@ -67,11 +69,26 @@ button.btn {
     border: none;
     height: 40px;
     border-radius: 10px;
-    background-color: coral;
+    /* background-color: coral; */
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
 }
 button.link {
     background-color: tranparent;
-    border: 1px solid coral;
+    /* border: 1px solid coral; */
     box-sizing: border-box;
+}
+.modal-backdrop1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+}
+.modalConfirm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0em;
+    padding-bottom: 0em;
 }

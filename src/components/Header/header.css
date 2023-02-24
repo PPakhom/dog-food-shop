@@ -11,6 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 0.5em 0 0.5em;
     /* margin: 0 2em; */
     /* font-size: 1.2em; */
 }
@@ -24,7 +25,7 @@ header {
 /* .header__catalog button i::before {
     margin-right: 1em;
 } */
-.header__catalog .button {
+.header__catalog .btn-catalog {
         /* width: 9em; */
     /* height: 3em; */
     width: 100%;
@@ -36,9 +37,10 @@ header {
     font-size: 1em;
     padding: 0.3em 0.8em;
 }
-.header__catalog .button:hover {
-        background-color: rgb(255, 152, 115);
-}
+.header__catalog .btn-catalog:hover {
+        /* background-color: rgb(255, 152, 115); */
+        background-color: rgba(231, 68, 9, 0.3);
+    }
 /* .search {
     background-color: transparent;
     border: none;
@@ -51,12 +53,19 @@ header {
 .menu {
     display: flex;
     gap: 1em;
+    justify-content: space-between;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(138, 80, 255);
 }
 .header__icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    gap: 1.5em;
+    font-size: 20px;
+    color: black;
 }
 .cart>a>svg {
     /* background-color: yellow; */
@@ -79,9 +88,9 @@ header {
 .header__bottom h2 {
     /* width: 300px; */
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
-    /* font-size: 2em; */
+    font-size: 1.5em;
     line-height: 1.2em;
-    margin: -0.2em 0;
+    margin: 0.2em 0;
 }
 .header__bottom p {
     /* width: 330px; */

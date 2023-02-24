@@ -1,0 +1,101 @@
+.ads {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    /* grid-template-rows: repeat(1, minmax(12em, 1fr)); */
+    /* grid-template-columns: repeat(2, 1fr); */
+    border-radius: 1em;
+    margin: 1em 0;
+    gap: 1em;
+    overflow: hidden;
+    z-index: 1;
+}
+.ad {
+    position: relative;
+    background-color: gold;
+    border-radius: 1em;
+    font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
+    display: grid;
+    min-width: 200px;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); */
+    overflow: hidden;
+}
+.ad:hover {
+    box-shadow: 0 0 25px #2226;
+}
+.ad__text {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 2em;
+}
+.ad__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad h2 {
+    white-space: pre-line;
+    font-size: 1.5em;
+}
+.ad p {
+    font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+.ad img {
+    position: absolute;
+    /* background-size: contain; */
+    /* background-position: center center; */
+    /* width: 50%; */
+    /* min-width: 50%; */
+    height: 80%;
+    /* border-radius: 1em; */
+    /* top: 0em; */
+    /* right: 3em; */
+    right: calc(8%);
+    z-index: 1;
+}
+.ad__symbol {
+    position: absolute;
+    top: -0.4em;
+    right: -0.1em;
+    font-size: 15em;
+    color: coral;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@media (max-width: 720px) {
+    .ads {
+        /* grid-template-columns: repeat(1, 1fr);  */
+        /* font-size: 1em; */
+        /* width: 80%; */
+    }
+    .ad {
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* width: 80%; */
+    }
+    .mobile-none {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .ads {
+        /* font-size: 1.2em; */
+        /* grid-template-columns: repeat(1, 100px); */
+        /* max-width: 50px; */
+        /* margin: 0; */
+    }
+    .ad {
+        /* width: 50px; */
+        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    }
+}
+@media (max-width: 480px) {
+    .ads {
+        /* font-size: 1.5em; */
+    }
+}

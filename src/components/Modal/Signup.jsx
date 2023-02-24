@@ -25,27 +25,24 @@ export default ({change, close}) => {
             email: inp1,
             password: inp2
         }
-    //    console.log(body); // Убираем, чтобы не было видно пароля
         api.signUp(body)
             .then(res => res.json())
             .then(data => {
-                // console.log(data.err);
                 if (!data.err) {
                     api.signIn(body)
                         .then(res => res.json())
                         .then(data => {
-                            localStorage.setItem("user8", data.data.name);
+                            localStorage.setItem("user8", JSON.stringify(data.data));
                             localStorage.setItem("token8", data.token);
                             setToken(data.token);
-                            setUser(data.data.name);
+                            setUser(data.data);
                         })
                     setInp1("");
                     setInp2("");
                     setInp3("");
                     close(false);
                 } else {
-                    alert(data.message);
-                    // Отобразить уведомление с ошибкой
+                    alert(data.message);  // Отобразить уведомление с ошибкой
                 }
             })
     }

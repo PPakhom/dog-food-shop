@@ -6,19 +6,25 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.container {
+a:hover {
+    color: inherit;
+}
+.wrapper {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 18em auto 12em;
     font-size: 1.1em;
 }
-.container>* {
+.wrapper>* {
     padding: 0 calc(50% - 30em);
 }
 main {
     background-image: url("./templates/Images/bg-dogfood-dogpaw.png");
     background-color: beige;
     background-size: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .main-page {
     display: flex;
@@ -26,72 +32,23 @@ main {
     align-items: center;
     margin: -3em 2em 1em;
 }
-.ads {
-    width: 100%;
-    /* height: 12em; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
-    grid-template-rows: repeat(1, minmax(12em, 1fr));
-    border-radius: 1em;
-    margin: 1em 0;
-    gap: 1em;
-    overflow: hidden;
-    z-index: 1;
-}
-.ad {
-    position: relative;
-    /* height: 12em; */
-    background-color: gold;
-    border-radius: 1em;
-    font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
-    display: flex;
-    padding: 0 2em;
-}
-.ad:hover {
-    box-shadow: 0 0 25px #2226;
-}
-.ad__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.ad h2 {
-    white-space: pre-line;
-}
-.ad p {
-    font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
-}
-.ad img {
-    position: absolute;
-    /* width: 50%; */
-    /* min-width: 50%; */
-    height: 100%;
-    /* border-radius: 1em; */
-    top: 0em;
-    right: 3em;
-    z-index: 1;
-}
-.ad__symbol {
-    position: absolute;
-    top: -0.4em;
-    right: -0.1em;
-    font-size: 15em;
-    color: coral;
-    opacity: 0.5;
-    z-index: 0;
+.catalog-header {
+    background-color: beige;
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 320px);
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
     gap: 1em;
+    justify-content: center;
 }
 /* 3 */
 @media (max-width: 1260px) {
-    .container {
+    .wrapper {
         /* grid-template-rows: 17em auto 12em; */
         /* font-size: 1em; */
     }
-    .container>* {
+    .wrapper>* {
         /* padding: 0 0.5em; */
     }
 }
@@ -103,29 +60,29 @@ main {
 }
 /* 2 */
 @media (max-width: 768px) {
-    .container {
+    .wrapper {
         font-size: 0.9em;
     }
     .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 }
 /* 1 and Footer*/
 @media (max-width: 720px) {
-    .container {
+    .wrapper {
         grid-template-rows: 17em auto 12em;
         font-size: 0.9em;
     }
     .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .container footer {
+    .wrapper footer {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
     }
-    .container footer .footer__group {
+    .wrapper footer .footer__group {
         display: none;
     }
     .footer__mobile {
@@ -139,63 +96,71 @@ main {
         height: 4.5em;
         border-radius: 1em;
         border: none;
-        background-color: coral;
-        color: #fff;
+        /* background-color: coral; */
+        /* color: #fff; */
     }
 }
-@media (max-width: 650px) {
-    .mobile-none {
-        display: none;
+@media (max-width: 600px) {
+    .wrapper {
+        /* grid-template-rows: 17em auto 12em; */
+        font-size: 0.65em;
     }
 }
 /* 1 */
-@media (max-width: 480px) {
-    .container {
+@media (max-width: 420px) {
+    .wrapper {
         grid-template-rows: 17em auto 12em;
         font-size: 0.55em;
     }
     .cards {
-        grid-template-columns: repeat(1, 1fr);
-    }
+        /* grid-template-columns: repeat(1, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       }
     .card {
         font-size: 2em;
     }
     .card__img {
         padding: 2em;
     }
-    .ads {
-        font-size: 1.6em;
-    }
 }
 /* 1 */
-@media (max-width: 420px) {
-    .container {
+/* @media (max-width: 420px) {
+    .wrapper {
         font-size: 0.45em;
     }
-}
+} */
 /* 1 */
 @media (max-width: 350px) {
-    .container {
+    .wrapper {
         font-size: 0.4em;
     }
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
-    .ads {
-        font-size: 1.5em;
-    }
-
 }
 
 .empty-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     height: 100%;
-    justify-content: center;
-    background-color: #dededeaa;
-    font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
+    /* height: fit-content; */
+    width: 100%;
+    /* width:fit-content; */
+    padding: 1em;
+    border-radius: 50%;
+    /* background-color: #dededeaa; */
+    /* background-color: rgb(255, 255, 255); */
+    /* background-color: rgba(245, 245, 220, 1); */
+    /* font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif; */
+    font-family: 'Commissioner', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: coral;
+    margin: -1em 2em 2em;
+
 }
 /* .empty-block>*:not(svg) {
     font-size: 1rem;
@@ -203,16 +168,27 @@ main {
 .empty-block svg {
     font-size: 4rem;
     /* fill: #dedede; */
-    fill: #000;
+    /* fill: #000; */
+    fill: coral;
 }
-.empty-block .btn {
-    border: 2px solid #000;
+.empty-block .empty-block__btn-main {
+    /* border: 2px solid #000; */
+    border: 2px solid coral;
     border-radius: 18px;
     display: flex;
     padding: 6px 12px;
 }
-.empty-block .btn:hover {
-    background-color: coral;
+.empty-block .empty-block__btn-main:hover {
+    /* background-color: coral; */
+    background-color: rgb(255, 127, 80, 0.4);
+    /* background-color: rgb(250, 250, 250, 1); */
+}
+.empty-block>* {
+    /* background-color: #d7d3ad; */
+    background-color: rgba(245, 245, 220, 1);
+    /* box-shadow: 0 0 3px #0006; */
+    border-radius: 1em;
+    /* padding: 0.1em; */
 }
 @font-face {
     font-family: "ArtegraSoft-Black";
@@ -221,4 +197,72 @@ main {
 @font-face {
     font-family: "ArtegraSoft-Regular";
     src: url("./templates/Fonts/ArtegraSoft-Regular.ttf");
- }
+}
+
+/* Для кнопок */
+button.btn {
+    /* width: 10em; */
+    /* height: 3em; */
+    /* border-radius: 1em; */
+    /* border: none; */
+    background-color: rgb(138, 80, 255);
+    color: #fff;
+    /* font-size: 0.6em; */
+}
+button.btn:hover {
+    /* background-color: rgb(255, 152, 115); */
+    background-color: coral;
+    color: #000;
+    /* opacity: 0.8; */
+}
+button.btnEdit {
+    width: 40px;
+    cursor: pointer;
+    height: auto;
+}
+
+.form-container {
+    /* width: 100%; */
+    /* background-color: #fff; */
+    margin: 1em 0 1em 0em;
+    padding: 0em;
+    /* display: flex; */
+    /* flex-direction: column; */
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.form-container .h1 {
+    /* width: 350px; */
+    width: 96%;
+    text-align: center;
+    background-color: beige;
+    /* border: 0.1em solid beige; */
+    padding: 0.1em;
+    border-radius: 0.5em;
+    color: coral;
+    font-weight: bold;
+    box-shadow: 0 0 25px #2226;
+    /* margin-left: -0.25em; */
+}
+.catalog.h1 {
+    width: 92%;
+    margin-left: 1em;
+}
+.form-col {
+    /* style={{padding: "1em", backgroundColor: "white", borderRadius: "1em", boxShadow: "0 0 25px #2226"}} */
+    padding: 1em;
+    background-color: beige;
+    border: 1px solid #dedede;
+    border-radius: 1em;
+    box-shadow: 0 0 15px #2226;
+}
+.form-col:hover {
+    box-shadow: 0 0 25px #2226;
+}
+.form-preview {
+    height: 106px;
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+}

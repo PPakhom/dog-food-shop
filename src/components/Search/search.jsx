@@ -5,29 +5,29 @@ import {ReactComponent as SearchImg} from "./img/magnifying-glass-solid.svg"
 import {ReactComponent as CloseImg} from "./img/circle-xmark-regular.svg"
 import Ctx from "../../Ctx";
 
-export default ({data, searchGoods}) => {
+export default () => {
     const navigate = useNavigate();
-    const {PATH} = useContext(Ctx);
+    const {goods, setVisibleGoods, PATH} = useContext(Ctx);
     const [text, updateText] = useState("");
-    const [searchData, setSearchData] = useState(data);
+    const [searchData, setSearchData] = useState(goods);
     const clearSearch = () => {
         updateText("");
-        setSearchData(data);
-        searchGoods(data);
+        setSearchData(goods);
+        setVisibleGoods(goods);
     }
     const search = (e) => {
         navigate(PATH + "catalog");
         updateText(e.target.value);
-        let arr = data.filter(el => el.name.toLowerCase().includes(e.target.value.toLowerCase()));
+        let arr = goods.filter(el => el.name.toLowerCase().includes(e.target.value.toLowerCase()));
         setSearchData(arr);
-        searchGoods(arr);
+        setVisibleGoods(arr);
     }
     return (
         <div className="search-block">
             <input placeholder="Поиск..." value={text} onChange={search}/>
-            {/* <button>{text ? <CloseImg onClick={clearSearch}/> : <SearchImg/>}</button> */}
-            <button className="btn-close">{text && <CloseImg onClick={clearSearch}/>}</button>
-            <button>{<SearchImg/>}</button>
+            <button>{text ? <CloseImg onClick={clearSearch}/> : <SearchImg/>}</button>
+            {/* <button className="btn_close">{text && <CloseImg onClick={clearSearch}/>}</button> */}
+            {/* <button>{<SearchImg/>}</button> */}
             {text && <div className="search-result">
                 По запросу <b>{text}</b>&nbsp;
                 {searchData.length > 0 ? `найдено ${searchData.length} товаров` : "не найдено ни одного товара"}

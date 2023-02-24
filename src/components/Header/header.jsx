@@ -6,10 +6,13 @@ import Ctx from "../../Ctx";
 
 import {ReactComponent as Logo} from "../../templates/Icons/logo-dogfood.svg";
 import {ReactComponent as Favorites} from "../../templates/Icons/ic-favorites.svg";
-import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
+// import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
+import {PlusCircle} from "react-bootstrap-icons";
 
-export default ({goods, searchGoods, setModalActive}) => {
-    const {user, setUser, PATH} = useContext(Ctx);
+export default () => {
+    // const {user, setUser, setModalActive, PATH} = useContext(Ctx);
+    const {user, setModalActive, PATH} = useContext(Ctx);
+ 
     const logIn = (e) => {
         e.preventDefault();
         setModalActive(prev => !prev);
@@ -28,23 +31,24 @@ export default ({goods, searchGoods, setModalActive}) => {
                     </Link>
                 </span>
                 <div className="header__catalog">
-                    <Link to={PATH + "catalog"} className="button">Каталог</Link>
+                    <Link to={PATH + "catalog"} className="btn-catalog">Каталог</Link>
                 </div>
-                <Search data={goods} searchGoods={searchGoods}/>
-                <div className="header__icons">
-                <div className="favorites">
-                    <a className="favorites__icon" href="">
-                        <Favorites/>
-                    </a>        
-                </div>
-                <div className="cart">
-                    <a className="cart__icon" href="">
-                        <Cart/>
-                    </a>
-                </div>        
-                </div>
+                <Search/>
                 <nav className="menu">
-                    {user && <Link to={PATH + "profile"}>{user}</Link>}
+                    <div className="header__icons">
+                        {user && <Link to={PATH + "add"}><PlusCircle style={{fontSize: "20px"}}/></Link>}
+                        <div className="favorites">
+                            <a className="favorites__icon" href="">
+                            <i className="fa-solid fa-heart"></i>
+                            </a>        
+                        </div>
+                        <div className="cart">
+                            <a className="cart__icon" href="">
+                                <i className="fa-solid fa-cart-plus"></i>
+                            </a>
+                        </div>        
+                    </div>
+                    {user && user.name && <Link to={PATH + "profile"}>{user.name}</Link>}
                     {!user && <a href="" onClick={logIn}>Войти</a>}
                     {/* {user && <a href="" onClick={logOut}>Выйти</a>} */}
                 </nav>

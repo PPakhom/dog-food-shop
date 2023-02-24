@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./card.css"
+
 import {ReactComponent as Icon_heart_solid} from "../../templates/Icons/heartpaw-solid.svg";
 import {ReactComponent as Icon_heart_regular} from "../../templates/Icons/heartpaw-regular.svg";
 import NoPhoto from "../../templates/Images/no_photo.png"
+import { priceDiscount } from "../../assets/functions";
 
-export default ({text, like}) => {
-    // const priceDiscount = () => {
-    //     if (text.discount) {
-    //         return text.price - text.price * text.discount / 100;
-    //     }
-    //     updateText("");
-    //     setSearchData(data);
-    // }
+import Ctx from "../../Ctx";
+
+export default ({data, flagHome}) => {
+    const {user} = useContext(Ctx);
+    // const like = data.author._id === user._id;
+    const like = true;
+    // console.log(data.author._id, user._id);
+    // console.log(user);
+    
     return (
-        <div className="card">
+        <div className="card" style={{borderRadius: "1em", justifyContent: "space-between"}}>
             <span className="card__heart">
                 {
                     like
@@ -24,25 +27,25 @@ export default ({text, like}) => {
                 }
             </span>
     
-            {text.discount > 0 && <span className="discount">{`-${text.discount}%`}</span>}
-            {<div className="card__img"><img src={text.pictures ? text.pictures : String(NoPhoto)} alt="Изображение товара"/></div>}
-            {<div className="block-price">
+            {data.discount > 0 && <span className="discount">{`-${data.discount}%`}</span>}
+            <div className="card__img"><img src={data.pictures ? data.pictures : String(NoPhoto)} alt={data.name}/></div>
+            <div className="block-price">
                 {
-                    text.discount > 0
-                        ? <span className="price">{text.price} ₽</span>
-                        : <span className="price price__transparent">{text.price} ₽</span>
+                    data.discount > 0
+                        ? <div className="price">{data.price} ₽</div>
+                        : <div className="price price__transparent">{data.price} ₽</div>
                 } 
-                <span className="price__discount">
+                <div className="price__discount">
                     {
-                        text.discount > 0
-                        ? <span className="price__red">{(text.price - text.price * text.discount / 100).toFixed(2)} ₽</span>
-                        : (text.discount === 0) && <span>{(text.price - text.price * text.discount / 100).toFixed(2)} ₽</span>
+                        data.discount > 0
+                        ? <div className="price__red">{priceDiscount(data.price, data.discount).toFixed(2)} ₽</div>
+                        : (data.discount === 0) && <div>{priceDiscount(data.price, data.discount).toFixed(2)} ₽</div>
                     }
-                </span>
-                {text.wight && <span className="wight">{text.wight}</span>}
-            </div>}
-            {<span className="name">{text.name}</span>}
-            {<div className="add__cart"><button>В корзину</button></div> }
+                </div>
+                {data.wight && <div className="wight">{data.wight}</div>}
+            </div>
+            <div className="name">{data.name}</div>
+            {!flagHome && <div className="add__cart"><button className="btn">В корзину</button></div>}
             {/* {
                 (text.name)
                 ? <>

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-
 import {Routes, Route} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import products from "./assets/data.json";
 
@@ -11,7 +11,8 @@ import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Profile from "./pages/Profile.jsx";
-import Product from "./pages/Product.jsx";
+import Product from "./pages/Product/Product.jsx";
+import AddForm from "./pages/AddForm";
 
 import {Api} from "./Api";
 import Ctx from "./Ctx";
@@ -19,10 +20,14 @@ import Ctx from "./Ctx";
 // const PATH = "/";
 const PATH = "/dog-food-shop/";
 
-const smiles = ["^_^", "=)", "O_o", ";(", "^_0", "@_@", "-_-"];
+// const smiles = ["^_^", "=)", "O_o", ";(", "^_0", "@_@", "-_-"];
 
 const App = () => {
-    const [user, setUser] = useState(localStorage.getItem("user8"));
+    let usr = localStorage.getItem("user8");
+    if  (usr) {
+        usr = JSON.parse(usr);
+    }
+    const [user, setUser] = useState(usr);
     const [token, setToken] = useState(localStorage.getItem("token8"));
     const [modalActive, setModalActive] = useState(false);
     const [api, setApi] = useState(new Api(token));
@@ -30,30 +35,30 @@ const App = () => {
     const [visibleGoods, setVisibleGoods] = useState(goods);
 
     useEffect(() => {
-        console.log("Hello");
-        console.log(token);
         if (token) {
             // загрузить данные с сервера
             api.getProducts()
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     setGoods(data.products);
                 })
         }
     }, []);
 
     useEffect(() => {
-        console.log("Change token");
         setApi(new Api(token));
-        setUser(localStorage.getItem("user8"));
+        let usr = localStorage.getItem("user8");
+        if  (usr) {
+            usr = JSON.parse(usr);
+        }
+        setUser(usr);
     }, [token]);
 
     useEffect(() => {
-        // console.log("Не user = ", user);
         if(!user) {
             localStorage.removeItem("token8");
             setToken(null);
+            setGoods(products);
         }
     }, [user]);
 
@@ -70,39 +75,39 @@ const App = () => {
 
     useEffect (() => {
         setVisibleGoods(goods);
-    }, [goods])
+     }, [goods])
 
     return (
         <Ctx.Provider value={{
             user: user,
             token: token,
             api: api,
+            modalActive: modalActive,
+            goods: goods,
+            visibleGoods: visibleGoods,
             setUser: setUser,
             setToken: setToken,
             setApi: setApi,
+            setModalActive,
+            setGoods,
+            setVisibleGoods,
             PATH: PATH
         }}>
-            <div className="container">
-                <Header 
-                    // user={user}
-                    // setUser={setUser}
-                    goods={goods}
-                    searchGoods={setVisibleGoods}
-                    setModalActive={setModalActive}
-                />
+            <div className="wrapper">
+                <Header/>
                 <main>
-                    {/* {user ? <Catalog data={goods}/> : <Home data={smiles}/>} */}
-                    {/* {user ? <Catalog data={goods}/> : <Catalog data={products}/>} */}
                     <Routes>
                         <Route path={PATH} element={<Home data={!user ? products : visibleGoods}/>}/>
-                        <Route path={PATH + "catalog"} element={<Catalog data={visibleGoods}/>}/>
+                        <Route path={PATH + "catalog"} element={<Catalog/>}/>
                         <Route path={PATH + "profile"} element={<Profile/>}/>
                         <Route path={PATH + "catalog/:id"} element={<Product/>}/>
+                        <Route path={PATH + "add"} element={<AddForm/>}/>
+                        <Route path={PATH + "edit/:id"} element={<AddForm/>}/>
                     </Routes>
                 </main>
                 <Footer/>
             </div>
-            <Modal isActive={modalActive} setState={setModalActive}/>
+            <Modal/>
         </Ctx.Provider>
     )
 }

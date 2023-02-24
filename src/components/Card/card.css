@@ -1,9 +1,7 @@
 .card {
-    /* width: 100%; */
-    height: 450px;
+    /* height: 450px; */
+    min-height: 100%;
     /* max-width: 590px; */
-    /* width: 100%;
-    height: 100%; */
     position: relative;
     box-shadow: 0 0 5px #2226;
     border-radius: 1em;
@@ -11,7 +9,7 @@
     /* box-sizing: border-box; */
     display: flex;
     flex-direction: column;
-    /* gap: 0.2em; */
+    gap: 0.5em;
     justify-content: space-between;
     /* align-items: center; */
     font-family: 'Commissioner', Arial, Helvetica, sans-serif;
@@ -45,14 +43,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 150px;
     /* padding: 5em; */
     margin-top: 2em;
 }
 .card img {
     /* display: block; */
-    max-width: 100%;
+    /* max-width: 100%; */
     height: 100%;
+    border-radius: 1em;
     /* background-size: cover; */
     /* min-width: 100px; */
     /* height: 280px; */
@@ -96,10 +95,12 @@
     height: 3em;
     border-radius: 1em;
     border: none;
-    background-color: coral;
+    background-color: rgb(138, 80, 255);
     color: #fff;
+    font-size: 0.6em;
 }
 .add__cart button:hover {
     /* background-color: rgb(255, 152, 115); */
-    opacity: 0.8;
+    background-color: coral;
+    /* opacity: 0.8; */
 }

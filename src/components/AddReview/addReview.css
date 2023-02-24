@@ -1,0 +1,31 @@
+Form {
+    margin-bottom: 30px;
+}
+
+.form-header {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.no-active {
+    display: none;
+}
+
+.active {
+    display: block;
+    margin-bottom: 40px;
+}
+
+button.btn-review {
+    background-color: coral;
+    color: #000;
+    margin-bottom: 1em;
+}
+
+button.btn-review:hover {
+    color: black;
+    background-color: rgb(138, 80, 255);
+    color: #fff;
+}
+

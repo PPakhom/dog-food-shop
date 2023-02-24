@@ -1,0 +1,40 @@
+<svg viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg" id="car">
+<path opacity="0.3" d="M4.61523 50.1044C4.61523 49.6098 5.01617 49.2089 5.51076 49.2089H59.0768C59.0768 50.198 58.275 50.9999 57.2858 50.9999H5.51076C5.01617 50.9999 4.61523 50.599 4.61523 50.1044Z" fill="#B3B3B7" />
+<path d="M42.0894 9.27371C48.4225 5.72509 55.7617 3.53723 59.9999 3.53723V44.3463C6.33332 44.3463 0.000157168 44.7899 0.000168816 42.1284C0.000204212 38.5798 -0.000182808 35.5749 0.000110702 31.9999C0.000205557 30.8445 0.635791 28.1374 4.52174 27.1848C8.40769 26.2323 17.0304 24.5667 20.8093 22.611C24.7314 20.5812 35.7562 12.8223 42.0894 9.27371Z" fill="url(#car_paint0_linear_11975_391708)" />
+<path d="M42.0894 9.27371C48.4225 5.72509 55.7617 3.53723 59.9999 3.53723V44.3463C6.33332 44.3463 0.000157168 44.7899 0.000168816 42.1284C0.000204212 38.5798 -0.000182808 35.5749 0.000110702 31.9999C0.000205557 30.8445 0.635791 28.1374 4.52174 27.1848C8.40769 26.2323 17.0304 24.5667 20.8093 22.611C24.7314 20.5812 35.7562 12.8223 42.0894 9.27371Z" fill="url(#car_paint1_radial_11975_391708)" />
+<path d="M42.0894 9.27371C48.4225 5.72509 55.7617 3.53723 59.9999 3.53723V44.3463C6.33332 44.3463 0.000157168 44.7899 0.000168816 42.1284C0.000204212 38.5798 -0.000182808 35.5749 0.000110702 31.9999C0.000205557 30.8445 0.635791 28.1374 4.52174 27.1848C8.40769 26.2323 17.0304 24.5667 20.8093 22.611C24.7314 20.5812 35.7562 12.8223 42.0894 9.27371Z" fill="url(#car_paint2_linear_11975_391708)" />
+<path d="M57.2857 8.41669V23.0547C57.2857 24.3855 56.1428 24.829 54.7359 24.829L26.6891 24.836C25.7847 24.836 25.332 24.5391 25.332 23.4984C25.332 20.8371 57.2857 2.20661 57.2857 8.41669Z" fill="url(#car_paint3_radial_11975_391708)" />
+<path opacity="0.5" d="M19.033 27.4902C11.0569 27.4902 4.59108 33.6994 4.59108 41.3588C4.59108 42.2041 4.43943 43.0318 4.59027 43.8354L9.95184 44.3462H32.94C33.0909 43.5426 33.4749 42.2041 33.4749 41.3588C33.4749 33.6994 27.009 27.4902 19.033 27.4902Z" fill="url(#car_paint4_radial_11975_391708)" />
+<path d="M0.904297 31.9262C0.904297 29.9663 2.49307 28.3776 4.45291 28.3776H12.2181C12.4654 28.3776 12.6658 28.578 12.6658 28.8253V29.2396C12.6658 30.7234 11.463 31.9262 9.97927 31.9262H0.904297Z" fill="#FFFBEF" />
+<ellipse cx="18.5473" cy="42.1285" rx="9.04734" ry="8.87154" fill="#151528" />
+<ellipse cx="18.548" cy="42.1284" rx="6.33314" ry="6.21008" fill="url(#car_paint5_radial_11975_391708)" />
+<defs>
+<linearGradient id="car_paint0_linear_11975_391708" x1="0.000197421" y1="34.144" x2="59.7127" y2="34.144" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFAD69" />
+<stop offset="0.197917" stop-color="#FE7200" />
+<stop offset="1" stop-color="#FF7300" />
+</linearGradient>
+<radialGradient id="car_paint1_radial_11975_391708" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60.165 44.7899) rotate(-90) scale(39.0348 93.7906)">
+<stop offset="0.381648" stop-color="white" stop-opacity="0" />
+<stop offset="1" stop-color="#FDECC2" stop-opacity="0.53" />
+</radialGradient>
+<linearGradient id="car_paint2_linear_11975_391708" x1="29.856" y1="1.76292" x2="29.9943" y2="44.3741" gradientUnits="userSpaceOnUse">
+<stop offset="0.260244" stop-color="#FE7200" stop-opacity="0" />
+<stop offset="0.609282" stop-color="white" stop-opacity="0.43" />
+<stop offset="0.9112" stop-color="white" stop-opacity="0" />
+</linearGradient>
+<radialGradient id="car_paint3_radial_11975_391708" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(57.4501 25.2727) rotate(-107.011) scale(18.5549 40.9147)">
+<stop stop-color="#151528" />
+<stop offset="1" stop-color="#745E82" />
+</radialGradient>
+<radialGradient id="car_paint4_radial_11975_391708" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.0296 41.7922) rotate(-90) scale(14.8128 15.4251)">
+<stop offset="0.392241" stop-color="#FFFBEF" stop-opacity="0" />
+<stop offset="0.784483" stop-color="#FFFBEF" stop-opacity="0.28" />
+<stop offset="1" stop-color="#FE7200" stop-opacity="0" />
+</radialGradient>
+<radialGradient id="car_paint5_radial_11975_391708" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.548 42.1284) rotate(90) scale(6.21008 6.33314)">
+<stop stop-color="#B3B3B7" />
+<stop offset="1" stop-color="#D7D7DD" />
+</radialGradient>
+</defs>
+</svg>

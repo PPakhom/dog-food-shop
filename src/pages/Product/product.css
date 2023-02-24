@@ -1,0 +1,177 @@
+.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: #fff;
+    font-family: 'Commissioner', Arial, Helvetica, sans-serif;
+    padding: 2em;
+}
+.btn-back {
+    width: 5em;
+    height: 40px;
+    background-color: coral;
+    border-radius: 1em;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    margin: 1em 1em 1em 0;
+}
+.product__edit {
+    display: flex;
+    gap: 1em;
+}
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 1em;
+
+}
+.product__header-top {
+    display: flex;
+    gap: 1em;
+    vertical-align: middle;
+    color: rgb(179, 179, 183);
+}
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2em;
+    color: rgb(93, 93, 100);
+}
+.rating__star {
+    fill: rgb(254, 114, 0);
+}
+.product__header-top .product__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2em;
+}
+.product__header-top .product__reviews i {
+    color: rgb(179, 179, 183);
+}
+.product__img {
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 1em;
+    width: 400px;
+    padding: 4em;
+    position: relative;
+    margin-top: 2em;
+}
+.product__img img{
+    width: 100%;
+    border-radius: 1em;
+}
+.product__discount {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    text-align: center;
+    display: block;
+    background-color: #cc4646;
+    border-radius: 0.5em;
+    padding: 0.10em 0.4em;
+    color: #ffffff;
+}
+
+.block-link {
+    display: flex;
+    height: 40px;
+    margin-top: 1em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+}
+
+.product__block-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    gap: 0.5em;
+}
+.product__block-right .block-price {
+    font-size: 1.7em;
+}
+.product__add__cart .btn {
+    height: 3em;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+.block-delivery {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    border: 4px solid rgb(255, 248, 235);
+    font-size: 0.8em;
+    padding: 1em 0 1em 1em;
+    white-space: pre-line;
+}
+
+.product-container h4 {
+    font-weight: bold;
+}
+.product__block-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 1.5em;
+}
+.specification {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Анимация загрузки */
+.place-holder::before {
+    display: inline-block;
+    min-height: 1em;
+    min-width: 100%;
+    vertical-align: middle;
+    cursor: wait;
+    background-color: currentcolor;
+    opacity: 0.2;
+}
+.mnw-5::before {
+    min-width: 5%;
+    content: "_____";
+}
+.mnw-10::before {
+    min-width: 10%;
+    content: "__________";
+}
+.mnw-25::before {
+    min-width: 25%;
+    content: "_________________________";
+}
+.mnw-50::before {
+    min-width: 50%;
+    content: "___________________________________";
+}
+.mnw-75::before {
+    min-width: 75%;  
+    content: "__________________________________________________";
+}
+.mnw-100::before {
+    min-width: 100%;  
+    content: "___________________________________________________________________________";
+}
+
+.place-holder {
+    animation: place-holder-glow 2s ease-in-out infinite;
+}
+
+@keyframes place-holder-glow {
+  50% {
+    opacity: 0.2;
+  }
+}
