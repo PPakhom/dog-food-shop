@@ -38,19 +38,8 @@ main {
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 320px);
-    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
     gap: 1em;
     justify-content: center;
-}
-/* 3 */
-@media (max-width: 1260px) {
-    .wrapper {
-        /* grid-template-rows: 17em auto 12em; */
-        /* font-size: 1em; */
-    }
-    .wrapper>* {
-        /* padding: 0 0.5em; */
-    }
 }
 /*  ads */ 
 @media (max-width: 998px) {
@@ -96,13 +85,10 @@ main {
         height: 4.5em;
         border-radius: 1em;
         border: none;
-        /* background-color: coral; */
-        /* color: #fff; */
     }
 }
 @media (max-width: 600px) {
     .wrapper {
-        /* grid-template-rows: 17em auto 12em; */
         font-size: 0.65em;
     }
 }
@@ -113,7 +99,6 @@ main {
         font-size: 0.55em;
     }
     .cards {
-        /* grid-template-columns: repeat(1, 1fr); */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
        }
     .card {
@@ -123,12 +108,6 @@ main {
         padding: 2em;
     }
 }
-/* 1 */
-/* @media (max-width: 420px) {
-    .wrapper {
-        font-size: 0.45em;
-    }
-} */
 /* 1 */
 @media (max-width: 350px) {
     .wrapper {
@@ -146,15 +125,9 @@ main {
     justify-content: center;
     gap: 10px;
     height: 100%;
-    /* height: fit-content; */
     width: 100%;
-    /* width:fit-content; */
     padding: 1em;
     border-radius: 50%;
-    /* background-color: #dededeaa; */
-    /* background-color: rgb(255, 255, 255); */
-    /* background-color: rgba(245, 245, 220, 1); */
-    /* font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif; */
     font-family: 'Commissioner', Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1.2em;
@@ -162,33 +135,22 @@ main {
     margin: -1em 2em 2em;
 
 }
-/* .empty-block>*:not(svg) {
-    font-size: 1rem;
-} */
 .empty-block svg {
     font-size: 4rem;
-    /* fill: #dedede; */
-    /* fill: #000; */
     fill: coral;
 }
 .empty-block .empty-block__btn-main {
-    /* border: 2px solid #000; */
     border: 2px solid coral;
     border-radius: 18px;
     display: flex;
     padding: 6px 12px;
 }
 .empty-block .empty-block__btn-main:hover {
-    /* background-color: coral; */
     background-color: rgb(255, 127, 80, 0.4);
-    /* background-color: rgb(250, 250, 250, 1); */
 }
 .empty-block>* {
-    /* background-color: #d7d3ad; */
     background-color: rgba(245, 245, 220, 1);
-    /* box-shadow: 0 0 3px #0006; */
     border-radius: 1em;
-    /* padding: 0.1em; */
 }
 @font-face {
     font-family: "ArtegraSoft-Black";
@@ -201,19 +163,12 @@ main {
 
 /* Для кнопок */
 button.btn {
-    /* width: 10em; */
-    /* height: 3em; */
-    /* border-radius: 1em; */
-    /* border: none; */
     background-color: rgb(138, 80, 255);
     color: #fff;
-    /* font-size: 0.6em; */
 }
 button.btn:hover {
-    /* background-color: rgb(255, 152, 115); */
     background-color: coral;
     color: #000;
-    /* opacity: 0.8; */
 }
 button.btnEdit {
     width: 40px;
@@ -222,35 +177,24 @@ button.btnEdit {
 }
 
 .form-container {
-    /* width: 100%; */
-    /* background-color: #fff; */
     margin: 1em 0 1em 0em;
     padding: 0em;
-    /* display: flex; */
-    /* flex-direction: column; */
-    
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 .form-container .h1 {
-    /* width: 350px; */
     width: 96%;
     text-align: center;
     background-color: beige;
-    /* border: 0.1em solid beige; */
     padding: 0.1em;
     border-radius: 0.5em;
     color: coral;
     font-weight: bold;
     box-shadow: 0 0 25px #2226;
-    /* margin-left: -0.25em; */
 }
 .catalog.h1 {
     width: 92%;
     margin-left: 1em;
 }
 .form-col {
-    /* style={{padding: "1em", backgroundColor: "white", borderRadius: "1em", boxShadow: "0 0 25px #2226"}} */
     padding: 1em;
     background-color: beige;
     border: 1px solid #dedede;

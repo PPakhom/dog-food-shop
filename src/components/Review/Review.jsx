@@ -13,17 +13,6 @@ export default ({rating, _id, text, author, product, created_at, setProduct}) =>
     const [name, setName] = useState("");
     const [avatar, setAvatar] = useState("");
     const navigate = useNavigate();
-    
-    // const setRating = (n) => {
-    //     let stars = [];
-    //     for (let i = 0; i < n; i++) {
-    //         stars.push(<StarFill key={i}/>)
-    //     }
-    //     for (let i = stars.length; i < 5; i++) {
-    //         stars.push(<Star key={i}/>);
-    //     }
-    //     return stars;
-    // }
 
     useEffect(() => {
         api.getUser(author)
@@ -40,23 +29,13 @@ export default ({rating, _id, text, author, product, created_at, setProduct}) =>
                 .then(res => res.json())
                 .then(data => {
                     if(!data.error) {
-                        // setGoods(prev => prev.filter(g => g._id !== data._id));
                         setGoods(prev => [...prev, data]);
-                        // setVisibleGoods(prev => [...prev, data]);
                         setProduct(data);
                         navigate(`${PATH}catalog/${product}`);
                     }
             })
         }
     }
-
-    // useEffect(() => {
-    //     api.getProduct(product)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setProduct(data);
-    //         })
-    // }, [api]);
 
     return (
     <div className="review-wrapper1">
