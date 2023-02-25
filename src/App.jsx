@@ -10,12 +10,11 @@ import Modal from "./components/Modal";
 
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
-import Profile from "./pages/Profile.jsx";
+import Profile from "./pages/Profile/Profile.jsx";
 import Product from "./pages/Product/Product.jsx";
 import AddForm from "./pages/AddForm";
 
 import Favorites from "./pages/Favorites/Favorites.jsx";
-// import Fake from "./pages/Fake";
 import Basket from "./pages/Basket/Basket.jsx";
 
 
@@ -24,8 +23,6 @@ import Ctx from "./Ctx";
 
 // const PATH = "/";
 const PATH = "/dog-food-shop/";
-
-// const smiles = ["^_^", "=)", "O_o", ";(", "^_0", "@_@", "-_-"];
 
 const App = () => {
     let usr = localStorage.getItem("user8");

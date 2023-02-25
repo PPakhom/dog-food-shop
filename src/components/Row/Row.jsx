@@ -84,8 +84,8 @@ export default ({name, pictures, cnt, price, discount, stock, id}) => {
 
                 {
                     discount > 0
-                        ? <div className="price">{price *n} ₽</div>
-                        : <div className="price price__transparent">{price *n} ₽</div>
+                        ? <div className="price">{(price *n).toFixed(2)} ₽</div>
+                        : <div className="price price__transparent">{(price *n).toFixed(2)} ₽</div>
                 }
                 </div>
                 <div className="price__discount">

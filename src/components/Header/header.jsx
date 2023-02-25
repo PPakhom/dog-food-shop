@@ -18,11 +18,6 @@ export default () => {
         e.preventDefault();
         setModalActive(prev => !prev);
     }
-    // const logOut = (e) => {
-    //     e.preventDefault();
-    //     localStorage.removeItem("user8");
-    //     setUser("");
-    // }
     return (
         <header>
             <div className="header__top">
@@ -32,19 +27,19 @@ export default () => {
                     </Link>
                 </span>
                 <div className="header__catalog">
-                    <Link to={PATH + "catalog"} className="btn-catalog">Каталог</Link>
+                    <Link to={PATH + "catalog"} className="btn-catalog" title="Каталог">Каталог</Link>
                 </div>
                 <Search/>
                 <nav className="menu">
                         { 
                         user && <>
                             <div className="header__icons">
-                                <Link to={PATH + "add"}>
+                                <Link to={PATH + "add"} title="Добавить товар">
                                     <PlusCircle style={{fontSize: "20px"}}/>
                                 </Link>
 
                                 <div className="favorites">
-                                    <Link to={PATH + "favorites"} className="badge-link">
+                                    <Link to={PATH + "favorites"} className="badge-link" title="Избранное">
                                         <i className="fa-solid fa-heart"></i>
                                         <Badge bg="light" text="dark">
                                             {favorites.length}
@@ -53,7 +48,7 @@ export default () => {
                                 </div>
 
                                 <div className="cart">
-                                    <Link to={PATH + "basket"} className="badge-link">
+                                    <Link to={PATH + "basket"} className="badge-link" title="Корзина">
                                         <i className="fa-solid fa-cart-plus"></i>
                                         <Badge bg="light" text="dark">
                                             {basket.reduce((acc, el) => acc + el.cnt, 0)}

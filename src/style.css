@@ -176,7 +176,10 @@ button.btnEdit {
     cursor: pointer;
     height: auto;
 }
-
+a.btn-back:hover {
+    background-color: rgb(138, 80, 255);
+    color: #fff;  
+}
 /* Для ссылок */
 a:hover {
     /* background-color: coral; */

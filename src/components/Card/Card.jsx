@@ -10,10 +10,6 @@ import Ctx from "../../Ctx";
 
 export default ({data, flagHome}) => {
     const {user, setFavorites, api, setGoods, setVisibleGoods, setBasket} = useContext(Ctx);
-    // const like = data.author._id === user._id;
-    // const like = true;
-    // console.log(data.author._id, user._id);
-    // console.log(user);
     const [like, setLike] = useState(data.likes && data.likes.includes(user._id));
     const [flag, setFlag] = useState(false);
 

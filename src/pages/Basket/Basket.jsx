@@ -71,7 +71,6 @@ export default () => {
                             <td colSpan={4} className="text-end fw-bold fs-3">ИТОГО:</td>
                             <td className="fw-bold fs-3">
                                 {(basket.reduce((acc, el, i) => {
-                                    // acc += el.cnt * gds[i].price;
                                     acc += el.cnt * priceDiscount(gds[i].price, gds[i].discount);
                                     return acc;
                                 }, 0)).toFixed(2)}₽

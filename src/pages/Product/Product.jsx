@@ -149,8 +149,8 @@ export default () => {
                             ? <>
                                 {
                                     product.discount > 0
-                                    ? <div className="price">{product.price} ₽</div>
-                                    : <div className="price price__transparent">{product.price} ₽</div>
+                                    ? <div className="price">{(product.price).toFixed(2)} ₽</div>
+                                    : <div className="price price__transparent">{(product.price).toFixed(2)} ₽</div>
                                 }    
                             </>
                             : <div className="place-holder mnw-25"></div>

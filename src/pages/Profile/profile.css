@@ -1,0 +1,54 @@
+.user-container {
+    justify-content: center;
+    align-items: center;
+    padding: 0em;
+}
+.user-container .h1 {
+    width: 96%;
+    text-align: center;
+    background-color: beige;
+    padding: 0.1em;
+    border-radius: 0.5em;
+    color: coral;
+    font-weight: bold;
+    box-shadow: 0 0 25px #2226;
+}
+.user__avatar {
+    width: 400px;
+}
+.user__avatar img {
+    width: 100%;
+    margin-left: 2em;
+}
+.user-container a.btn-back {
+    width: 20%;
+    height: 50px;
+    margin-left: 2em;
+}
+
+.user-container .row {
+    margin-left: 2em;
+}
+.user__btnEdit {
+    margin-top: 1em;
+    display: flex;
+    gap: 0.3em;
+}
+.user-name {
+    font-size: 1em;
+    font-weight: bold;
+}
+.user-block {
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+.about-user {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.user-text {
+    font-size: 1em;
+    font-weight: bold;
+}
