@@ -6,12 +6,9 @@ import "./header.css";
 import Ctx from "../../Ctx";
 
 import { ReactComponent as Logo } from "../../templates/Icons/logo-dogfood.svg";
-import {ReactComponent as Favorites} from "../../templates/Icons/ic-favorites.svg";
-// import {ReactComponent as Cart} from "../../templates/Icons/ic-cart.svg";
 import { PlusCircle } from "react-bootstrap-icons";
 
 export default () => {
-    // const {user, setUser, setModalActive, PATH} = useContext(Ctx);
     const {user, setModalActive, favorites, basket, PATH} = useContext(Ctx);
  
     const logIn = (e) => {
@@ -60,7 +57,6 @@ export default () => {
                         }
                     {user && user.name && <Link to={PATH + "profile"} title="Личный кабинет">{user.name}</Link>}
                     {!user && <a href="" onClick={logIn}>Войти</a>}
-                    {/* {user && <a href="" onClick={logOut}>Выйти</a>} */}
                 </nav>
             </div>
             <div className="header__bottom">

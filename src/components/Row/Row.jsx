@@ -62,26 +62,15 @@ export default ({name, pictures, cnt, price, discount, stock, id}) => {
                 <Button variant="warning" onClick={increment}>+</Button>
             </ButtonGroup>
         </td>
-        {/* <td>{price * n}₽</td> */}
-        {/* <td className={!flagOver ? "basket__stock" : "basket__stock-red"}>{stock}</td> */}
         <td><div className={!flagOver ? "basket__stock" : "basket__stock-red"}>{stock - n} шт.</div></td>
         <td>
             <div className="basket__price">
-                {/* <div className="product__edit">
-                    <button 
-                        onClick={remove} 
-                        className="btn btnEdit" 
-                    >
-                        <Trash3/>
-                    </button>
-                </div> */}
                 <div className="price-top">
                 {
                     discount > 0 && 
                     <span className="basket__discount">
                         {`-${discount}%`}
                     </span>}
-
                 {
                     discount > 0
                         ? <div className="price">{(price *n).toFixed(2)} ₽</div>
@@ -98,19 +87,14 @@ export default ({name, pictures, cnt, price, discount, stock, id}) => {
             </div>
         </td>
         <td>
-                <div className="product__edit">
-                    <button 
-                        onClick={remove} 
-                        className="btn btnEdit" 
-                    >
-                        <Trash3/>
-                    </button>
-                </div>
-
-
-            {/* <button onClick={removeFromBasket} className="btn-change">
-                <Trash3 />
-            </button> */}
+        <div className="product__edit">
+            <button 
+                onClick={remove} 
+                className="btn btnEdit" 
+            >
+                <Trash3/>
+            </button>
+        </div>
         </td>
     </tr>
 }

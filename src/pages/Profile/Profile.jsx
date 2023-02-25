@@ -7,7 +7,6 @@ import "./profile.css";
 import Ctx from "../../Ctx";
 
 export default () => {
-    
     const {user, setUser, api, PATH} = useContext(Ctx);
     const [nameFlag, setNameFlag] = useState(false);
     const [name, setName] = useState(user.name);
@@ -16,8 +15,7 @@ export default () => {
     const [imgFlag, setImgFlag] = useState(false);
     const [img, setImg] = useState(user.avatar);
     const navigate = useNavigate();
-    
-
+ 
     const updUser = () => {
         api.updateUser({
             name: name,
@@ -165,5 +163,3 @@ export default () => {
         </div>
     </div>
 }
-
-

@@ -6,23 +6,8 @@ import "./basket.css";
 
 import { priceDiscount } from "../../assets/functions";
 
-
 import Ctx from "../../Ctx";
 import Row from "../../components/Row/Row";
-
-/*
-    +1) Создать массив корзины как Ctx
-    +2) сохранять корзину в localStorage
-    +3) Создать страницу Cart и подключить к ней роутер
-    +4) Создать ссылку на страницу с корзиной (header)
-    +5) Научиться добавлять товары в корзину
-    6) Отобразить информацию о корзине
-    7) Изменять количество товаров в корзине и пересчитывать сумму
-    [{
-        id: "...",
-        cnt: "..."
-    }]
-*/
 
 export default () => {
     const [gds, setGds] = useState([]);

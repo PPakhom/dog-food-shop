@@ -51,15 +51,11 @@ form {
 }
 input {
     flex: 1;
-    /* height: 30px; */
-    /* width: 100%; */
     box-sizing: border-box;
     border-radius: 0.5em;
     border: 0.1em solid silver;
-    /* font-size: 16px; */
     font-size: 1em;
     outline: none;
-    /* padding: 6px 12px; */
     padding: 0.3em 0.5em;
 }
 input:focus {
@@ -69,12 +65,10 @@ button.btn {
     border: none;
     height: 40px;
     border-radius: 10px;
-    /* background-color: coral; */
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
 }
 button.link {
     background-color: tranparent;
-    /* border: 1px solid coral; */
     box-sizing: border-box;
 }
 .modal-backdrop1 {

@@ -26,8 +26,6 @@ export default () => {
         <div className="search-block">
             <input placeholder="Поиск..." value={text} onChange={search}/>
             <button>{text ? <CloseImg onClick={clearSearch}/> : <SearchImg/>}</button>
-            {/* <button className="btn_close">{text && <CloseImg onClick={clearSearch}/>}</button> */}
-            {/* <button>{<SearchImg/>}</button> */}
             {text && <div className="search-result">
                 По запросу <b>{text}</b>&nbsp;
                 {searchData.length > 0 ? `найдено ${searchData.length} товаров` : "не найдено ни одного товара"}

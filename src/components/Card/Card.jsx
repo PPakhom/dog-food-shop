@@ -65,8 +65,6 @@ export default ({data, flagHome}) => {
             <span className="card__heart" onClick={update}>
                 {
                     like
-                    // ? <i className="fa-solid fa-heart"></i>
-                    // : <i className="fa-regular fa-heart"></i>
                     ? <Icon_heart_solid/>
                     : <Icon_heart_regular/>
                 }
@@ -96,14 +94,6 @@ export default ({data, flagHome}) => {
                     <button className="btn" onClick={buy}>В корзину</button>
                 </div>
             }
-            {/* {
-                (text.name)
-                ? <>
-                      <span className="name">{text.name}</span>
-                      <div className="add__cart"><button>В корзину</button></div> 
-                  </>
-                : <span className="name">{text}</span>
-            }  */}
         </div>
     )
 }

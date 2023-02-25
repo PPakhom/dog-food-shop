@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dog-food-shop/static/css/main.2621a485.css",
-    "main.js": "/dog-food-shop/static/js/main.8654fbcb.js",
+    "main.css": "/dog-food-shop/static/css/main.1dc6861d.css",
+    "main.js": "/dog-food-shop/static/js/main.4db6a8f6.js",
     "static/media/ad22.png": "/dog-food-shop/static/media/ad22.08d569262df259ea86b5.png",
     "static/media/ad21.png": "/dog-food-shop/static/media/ad21.82bc06af7c389f002900.png",
     "static/media/banner2.png": "/dog-food-shop/static/media/banner2.67803257c88d9e654bf1.png",
@@ -19,13 +19,12 @@
     "index.html": "/dog-food-shop/index.html",
     "static/media/heartpaw-solid.svg": "/dog-food-shop/static/media/heartpaw-solid.c37a401d226487c50256462a2e00bea3.svg",
     "static/media/circle-xmark-regular.svg": "/dog-food-shop/static/media/circle-xmark-regular.8ef6e0a127f37e5c70a1e4bb4cb92f32.svg",
-    "static/media/ic-favorites.svg": "/dog-food-shop/static/media/ic-favorites.eb441df174ebe11ea363f0bffa4f0c1c.svg",
     "static/media/magnifying-glass-solid.svg": "/dog-food-shop/static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
-    "main.2621a485.css.map": "/dog-food-shop/static/css/main.2621a485.css.map",
-    "main.8654fbcb.js.map": "/dog-food-shop/static/js/main.8654fbcb.js.map"
+    "main.1dc6861d.css.map": "/dog-food-shop/static/css/main.1dc6861d.css.map",
+    "main.4db6a8f6.js.map": "/dog-food-shop/static/js/main.4db6a8f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.2621a485.css",
-    "static/js/main.8654fbcb.js"
+    "static/css/main.1dc6861d.css",
+    "static/js/main.4db6a8f6.js"
   ]
 }

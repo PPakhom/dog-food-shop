@@ -1,35 +1,19 @@
 header {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 60px; */
     background-color:coral;
     color: #fff;
     font-family: 'ArtegraSoft-Regular', Arial, Helvetica, sans-serif;
-    /* font-size: 1.2em; */
 }
 .header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 0.5em 0 0.5em;
-    /* margin: 0 2em; */
-    /* font-size: 1.2em; */
 }
 .logo>a>svg {
-    /* width: 120px; */
-    /* max-width: 120px; */
-    /* max-width: 100%; */
     width: 6em;
-    /* height: 4em; */
 }
-/* .header__catalog button i::before {
-    margin-right: 1em;
-} */
 .header__catalog .btn-catalog {
-        /* width: 9em; */
-    /* height: 3em; */
     width: 100%;
-    /* height: 100%; */
     background-color: rgb(231, 68, 9);
     border: #fff  solid 0.1em;
     border-radius: 0.6em;
@@ -38,18 +22,8 @@ header {
     padding: 0.3em 0.8em;
 }
 .header__catalog .btn-catalog:hover {
-        /* background-color: rgb(255, 152, 115); */
         background-color: rgba(231, 68, 9, 0.3);
     }
-/* .search {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #222;
-    outline: none;
-}
-.search:focus {
-    border-bottom-color: #fff;
-} */
 .menu {
     display: flex;
     gap: 1em;
@@ -68,12 +42,10 @@ header {
     color: black;
 }
 .cart>a>svg {
-    /* background-color: yellow; */
     width: 1.8em;
     fill: yellow;
 }
 .favorites>a>svg {
-    /* background-color: yellow; */
     width: 1.8em;
     fill: yellow;
 }
@@ -86,17 +58,13 @@ header {
     margin-left: 4.2em;
 }
 .header__bottom h2 {
-    /* width: 300px; */
     font-family: 'ArtegraSoft-Black', Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     line-height: 1.2em;
     margin: 0.2em 0;
 }
 .header__bottom p {
-    /* width: 330px; */
-    /* font-size: 1em; */
     line-height: 1.2em;
-    /* margin-top: -2em; */
 }
 .badge-link {
     position: relative;

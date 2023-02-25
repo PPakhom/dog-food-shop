@@ -4,16 +4,8 @@ import Modal from 'react-bootstrap/Modal';
 
 export default ({show, setShow, setDelete}) => {
   
-    // const handleDelete = (e) => {
-    //     e.preventDefault();
-    //     setDelete(true);
-    //     setShow(false);
-    // }
-
     const handleDelete = () => setDelete(true);
-
     const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true)
 
 return (
     <div>

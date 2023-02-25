@@ -1,21 +1,15 @@
 import React from "react";
 import "./footer.css";
-// import Logo from "../../templates/Icons/logo-dogfood.svg";
 import {ReactComponent as Logo} from "../../templates/Icons/logo-dogfood.svg";
 
 export default () => {
     const year = new Date().getFullYear();
     return (
         <footer>
-            {/* <div className="footer__container"> */}
                 <div className="footer__mobile">
                     <div className="footer__group">
-                        {/* <a className="logo" href="/" title="Магазин корма для собак">
-                            <img src={Logo} alt="DogFood"/>
-                        </a> */}
                         <span className="logo">
                             <a className="logo__icon" href="/" title="Магазин корма для собак">
-                            {/* <img src={Logo} alt="Логотип DogFood"/> */}
                             <Logo/>
                             </a>
                         </span>
@@ -36,12 +30,10 @@ export default () => {
                 </div>
                 <div className="footer__mobile">
                     <div className="footer__contacts">
-                        {/* <div className="contacts"> */}
                         <h3>
                             Мы на связи<br/>
                             <a href="tel:74950000000">+7 (495) 000-00-00</a>
                         </h3>
-                        {/* </div>                         */}
                         <a href="mailto:dogfood.ru@gmail.com">dogfood.ru@gmail.com</a>
                     </div>
                     <div className="footer__socialnetwork">
@@ -61,11 +53,7 @@ export default () => {
                             <i className="fa-brands fa-vk"></i>
                         </a>
                     </div>    
-                    {/* <div className="footer__mobile__copyright">© "Интернет-магазин DogFood", {year}</div> */}
                 </div>
-            {/* </div>    */}
         </footer>
     )
 }
-// © => &copy;
-// &nbsp; - неразбиваемый пробел
