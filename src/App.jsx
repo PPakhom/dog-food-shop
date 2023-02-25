@@ -14,6 +14,11 @@ import Profile from "./pages/Profile.jsx";
 import Product from "./pages/Product/Product.jsx";
 import AddForm from "./pages/AddForm";
 
+import Favorites from "./pages/Favorites/Favorites.jsx";
+// import Fake from "./pages/Fake";
+import Basket from "./pages/Basket/Basket.jsx";
+
+
 import {Api} from "./Api";
 import Ctx from "./Ctx";
 
@@ -33,6 +38,8 @@ const App = () => {
     const [api, setApi] = useState(new Api(token));
     const [goods, setGoods] = useState([]);
     const [visibleGoods, setVisibleGoods] = useState(goods);
+    const [favorites, setFavorites] = useState([]);
+    const [basket, setBasket] = useState(localStorage.getItem("basket8") ? JSON.parse(localStorage.getItem("basket8")) : []);
 
     useEffect(() => {
         if (token) {
@@ -75,22 +82,44 @@ const App = () => {
 
     useEffect (() => {
         setVisibleGoods(goods);
-     }, [goods])
+    }, [goods])
 
+    useEffect(() => {
+        setFavorites(goods.filter(el => {
+            // Найти только те товары, в которых свойство likes ([]) включает в себя id моего пользователя
+            return el.likes && el.likes.includes(user._id);
+        }))
+    }, [goods])
+    
+    useEffect(() => {
+        setFavorites(goods.filter(el => {
+            // Найти только те товары, в которых свойство likes ([]) включает в себя id моего пользователя
+            return el.likes && el.likes.includes(user._id);
+        }))
+    }, [goods])
+
+    useEffect(() => {
+        localStorage.setItem("basket8", JSON.stringify(basket));
+    }, [basket]);
+    
     return (
         <Ctx.Provider value={{
             user: user,
-            token: token,
-            api: api,
-            modalActive: modalActive,
-            goods: goods,
-            visibleGoods: visibleGoods,
             setUser: setUser,
+            token: token,
             setToken: setToken,
+            api: api,
             setApi: setApi,
-            setModalActive,
-            setGoods,
-            setVisibleGoods,
+            modalActive: modalActive,
+            setModalActive: setModalActive,
+            goods: goods,
+            setGoods: setGoods,
+            visibleGoods: visibleGoods,
+            setVisibleGoods: setVisibleGoods,
+            favorites: favorites,
+            setFavorites: setFavorites,
+            basket,
+            setBasket,
             PATH: PATH
         }}>
             <div className="wrapper">
@@ -103,7 +132,9 @@ const App = () => {
                         <Route path={PATH + "catalog/:id"} element={<Product/>}/>
                         <Route path={PATH + "add"} element={<AddForm/>}/>
                         <Route path={PATH + "edit/:id"} element={<AddForm/>}/>
-                    </Routes>
+                        <Route path={PATH + "favorites"} element={<Favorites/>}/>
+                        <Route path={PATH + "basket"} element={<Basket />} />
+                   </Routes>
                 </main>
                 <Footer/>
             </div>

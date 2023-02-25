@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import Review from "../../components/Review/Review";
 import AddReview from "../../components/AddReview/AddReview"
 import "./product.css";
@@ -18,7 +19,7 @@ export default () => {
     const {id} = useParams();
     const [product, setProduct] = useState({});
     // По id товара получаются данные о товаре для отрисовки страницы с товаром
-    const {api, user, setGoods, setVisibleGoods, PATH} = useContext(Ctx);
+    const {api, user, setGoods, setVisibleGoods, setBasket, PATH} = useContext(Ctx);
     const navigate = useNavigate();
 
     const [show, setShow] = useState(false);
@@ -34,14 +35,6 @@ export default () => {
             })
     }, []);
 
-    const remove = () => {
-        setShow(true);
-    }
-
-    const edit = () => {
-        navigate(`${PATH}edit/${id}`);
-    }
-
     useEffect(() => {
         if(del) {
             api.deleteProduct(id)
@@ -55,6 +48,32 @@ export default () => {
                 })
         }
     }, [del]);
+
+    const remove = () => {
+        setShow(true);
+    }
+
+    const edit = () => {
+        navigate(`${PATH}edit/${id}`);
+    }
+
+    const buy = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setBasket(prev => {
+            const test = prev.filter(el => el.id === id);
+            if(test.length) {
+                return prev.map(el => {
+                    if(el.id === id) {
+                        el.cnt++;
+                    }
+                    return el;
+                })
+            } else {
+                return [...prev, {id: id, cnt: 1}];
+            }
+        })
+    }
 
     return (
         <div className="product-container">
@@ -96,7 +115,9 @@ export default () => {
                                 </div>
                                 <div className="product__reviews">
                                     <i className="fa fa-comment"></i>
-                                    <div>{`${ numArrayToWord(product.reviews.length, arrayWords) }`}</div>
+                                    <HashLink to={`${PATH}catalog/${id}#hash-reviews`}>
+                                        <div>{`${ numArrayToWord(product.reviews.length, arrayWords) }`}</div>
+                                    </HashLink>
                                 </div>
                             </>
                             : <div className="place-holder mnw-5"></div>
@@ -149,7 +170,7 @@ export default () => {
                     </div>
    
                     <div className="product__add__cart">
-                        <button className="btn">
+                        <button className="btn" onClick={buy}>
                             <i className="fa-solid fa-cart-plus"></i>В корзину
                         </button>
                     </div>
@@ -235,7 +256,7 @@ export default () => {
                     </div>
                 </div>
             </div>    
-            <h4>Отзывы</h4>
+            <h4 id="hash-reviews">Отзывы</h4>
             {/* id товара  */}
             <AddReview id={id} setProduct={setProduct} />
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./card.css"
 
 import {ReactComponent as Icon_heart_solid} from "../../templates/Icons/heartpaw-solid.svg";
@@ -9,15 +9,64 @@ import { priceDiscount } from "../../assets/functions";
 import Ctx from "../../Ctx";
 
 export default ({data, flagHome}) => {
-    const {user} = useContext(Ctx);
+    const {user, setFavorites, api, setGoods, setVisibleGoods, setBasket} = useContext(Ctx);
     // const like = data.author._id === user._id;
-    const like = true;
+    // const like = true;
     // console.log(data.author._id, user._id);
     // console.log(user);
+    const [like, setLike] = useState(data.likes && data.likes.includes(user._id));
+    const [flag, setFlag] = useState(false);
+
+    const update = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        setFlag(true);
+        setLike(!like); // false => true
+        api.setLike(data._id, like) // false
+            .then(res => res.json())
+            .then(data => {
+                setFavorites(prev => {
+                    let arr = prev.filter(el => el._id === data._id);
+                    return arr.length > 0 ? 
+                        prev.filter(el => el._id !== data._id) : 
+                        [...prev, data]
+                })
+                setGoods(prev => prev.map(el => {
+                    if (el._id === data._id) {
+                        return data;
+                    } else {
+                        return el;
+                    }
+                }));
+                setVisibleGoods(prev => prev.map(el => {
+                    if (el._id === data._id) {
+                        return data;
+                    } else {
+                        return el;
+                    }
+                }));
+            })
+    }
+
+    const buy = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setBasket(prev => {
+            const test = prev.filter(el => el.id === data._id);
+            if(test.length) {
+                return prev.map(el => {
+                    if(el.id === data._id) {
+                        el.cnt++;
+                    }
+                    return el;
+                })
+            } else return [...prev, {id: data._id, cnt: 1}]; 
+        })
+    }
     
     return (
         <div className="card" style={{borderRadius: "1em", justifyContent: "space-between"}}>
-            <span className="card__heart">
+            <span className="card__heart" onClick={update}>
                 {
                     like
                     // ? <i className="fa-solid fa-heart"></i>
@@ -45,7 +94,12 @@ export default ({data, flagHome}) => {
                 {data.wight && <div className="wight">{data.wight}</div>}
             </div>
             <div className="name">{data.name}</div>
-            {!flagHome && <div className="add__cart"><button className="btn">В корзину</button></div>}
+            { 
+                !flagHome && 
+                <div className="add__cart">
+                    <button className="btn" onClick={buy}>В корзину</button>
+                </div>
+            }
             {/* {
                 (text.name)
                 ? <>

@@ -1,0 +1,48 @@
+.price {
+    font-size: 0.8em;
+    color: #a5a5a5;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+.price__discount {
+    font-weight: bold;
+}
+.price__red {
+    color: red;
+}
+.price__transparent {
+    color: transparent;
+}
+.price-top {
+    display: flex;
+    justify-content: end;
+    gap: 0.5em;
+    text-align: right;
+}
+.basket__discount {
+    font-size: 0.8em;
+    text-align: center;
+    display: block;
+    background-color: #cc4646;
+    border-radius: 0.5em;
+    padding: 0.1em 0.4em;
+    color: #fff;    
+}
+.basket__price .price__discount {
+    font-size: 1.2em;
+}
+.basket__price {
+    text-align: right;
+    margin-right: 2em;
+}
+.basket__stock {
+    font-size: 1.2em;
+}
+.basket__stock-red {
+    font-size: 1.2em;
+    color: red;
+}
+.basket__stock-red:hover {
+    font-size: 1.2em;
+    color: red;
+}

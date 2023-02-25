@@ -1,0 +1,24 @@
+.table {
+    background-color: beige;
+    border: 1px solid #dedede;
+    border-radius: 1em;
+    box-shadow: 0 0 15px #2226;
+}
+.basket-container h1 {
+    width: 100%;
+    text-align: center;
+    background-color: beige;
+    padding: 0.1em;
+    border-radius: 0.5em;
+    color: coral;
+    font-weight: bold;
+    box-shadow: 0 0 25px #2226;
+}
+.table th {
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+}
+.table td {
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: right;
+}

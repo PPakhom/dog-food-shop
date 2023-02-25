@@ -2,15 +2,19 @@ import React from "react";
 
 export default React.createContext({
     user: {},
-    token: "",
-    api: {},
     setUser: () => {},
+    token: "",
     setToken: () => {},
+    api: {},
     setApi: () => {},
     modalActive: false,
     setModalActive: () => {},
     goods: [],
     setGoods: () => {},
     visibleGoods: [],
-    setVisibleGoods: () => {}
+    setVisibleGoods: () => {},
+    favorites: [],
+    setFavorites: () => {},
+    basket: [],
+    setBasket: () => {}
 });
