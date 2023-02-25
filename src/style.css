@@ -144,6 +144,7 @@ main {
     border-radius: 18px;
     display: flex;
     padding: 6px 12px;
+    margin: 0;
 }
 .empty-block .empty-block__btn-main:hover {
     background-color: rgb(255, 127, 80, 0.4);

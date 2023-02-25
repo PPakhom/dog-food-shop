@@ -57,23 +57,6 @@ export default () => {
         }
     }, [visibleGoods]); 
 
-
-
-
-    // const [flagLoad, setFlagLoad] = useState(false);
-    // console.log("1", flagLoad);
-    // useEffect (() => {
-    //     console.log(visibleGoods);
-    //     window.onload = function() {
-    //         setFlagLoad(true);
-    //         console.log("2", flagLoad);
-    //     }    
-    // }, [visibleGoods])
-
-
-
-
-
     return <div className="form-container">
         { 
             user && <>
@@ -94,17 +77,8 @@ export default () => {
                         </div>
                         <Pagination hook={paginate}/>
 
-                        {/* <div className="catalog-header">
-                            <h1>Каталог товаров</h1>
-                        </div> */}
                         <div className="cards">
                             {/* Опасно! Работают профи, не пытайтесь повторить это сами!  */}
-                            { 
-                                // visibleGoods.map((el, i) => 
-                                // <Link to={`${PATH}catalog/${el._id}`} key={el._id}>
-                                //     <Card key={"card_" + i} data={el} like={(i + 1) % 2 === 0}  flagHome={flagHome}/>
-                                // </Link>)
-                            }
                             {
                                 paginate.setPageData().map((el, i) => 
                                 <Link to={`${PATH}catalog/${el._id}`} key={el._id}>
@@ -119,20 +93,6 @@ export default () => {
                         <p>Простите, по вашему запросу товаров не найдено</p>
                         <Link to={PATH} className="empty-block__btn-main">На главную</Link>
                     </div>
-
-                    // : <>
-                    //     {  
-                    //         flagLoad
-                    //         ? <div className="empty-block">
-                    //             <EmojiFrown/>
-                    //             <p>Простите, по вашему запросу товаров не найдено</p>
-                    //             <Link to={PATH} className="empty-block__btn-main">На главную</Link>
-                    //         </div>
-                    //         : <div className="empty-block">
-                    //             <p>Товары загружаются</p>
-                    //         </div>
-                    //     }    
-                    // </>
                 }
             </>
         }
