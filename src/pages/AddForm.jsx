@@ -3,6 +3,8 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import Ctx from "../Ctx";
 
+import { PATH } from "../utils/functions";
+
 export default () => {
     const [name, setName] = useState("");
     const [price, setPrice] = useState(100);
@@ -12,7 +14,7 @@ export default () => {
     const [description, setDescription] = useState("");
     const [pictures, setPictures] = useState("");
 
-    const { api, setGoods, setVisibleGoods, PATH } = useContext(Ctx);
+    const { api, setGoods, setVisibleGoods } = useContext(Ctx);
     const navigate = useNavigate();
     const { id } = useParams();
 

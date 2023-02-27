@@ -12,14 +12,14 @@ import { Trash3, StarFill, PencilSquare } from "react-bootstrap-icons";
 import { ReactComponent as DeliveryBox } from "../../templates/Icons/delivery-box.svg";
 import { ReactComponent as DeliveryCar } from "../../templates/Icons/delivery-car.svg";
 import { ReactComponent as Quality } from "../../templates/Icons/quality.svg";
-import { priceDiscount, addDaysToDate, ratingTotal, numArrayToWord } from "../../assets/functions";
+import { priceDiscount, addDaysToDate, ratingTotal, numArrayToWord, PATH } from "../../utils/functions";
 
 export default () => {
     // id товара
     const {id} = useParams();
     const [product, setProduct] = useState({});
     // По id товара получаются данные о товаре для отрисовки страницы с товаром
-    const {api, user, setGoods, setVisibleGoods, setBasket, PATH} = useContext(Ctx);
+    const { api, user, setGoods, setVisibleGoods, setBasket } = useContext(Ctx);
     const navigate = useNavigate();
 
     const [show, setShow] = useState(false);

@@ -18,11 +18,12 @@ import Favorites from "./pages/Favorites/Favorites.jsx";
 import Basket from "./pages/Basket/Basket.jsx";
 
 
-import {Api} from "./Api";
+import {Api} from "./utils//Api";
 import Ctx from "./Ctx";
 
 // const PATH = "/";
-const PATH = "/dog-food-shop/";
+// const PATH = "/dog-food-shop/";
+import { PATH } from "./utils/functions";
 
 const App = () => {
     let usr = localStorage.getItem("user8");
@@ -116,8 +117,7 @@ const App = () => {
             favorites: favorites,
             setFavorites: setFavorites,
             basket,
-            setBasket,
-            PATH: PATH
+            setBasket
         }}>
             <div className="wrapper">
                 <Header/>

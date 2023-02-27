@@ -6,10 +6,10 @@ import "./review.css";
 import Ctx from "../../Ctx";
 
 import { Trash3 } from "react-bootstrap-icons";
-import { dayMonthYearToString } from "../../assets/functions";
+import { dayMonthYearToString, PATH } from "../../utils/functions";
 
 export default ({rating, _id, text, author, product, created_at, setProduct}) => {
-    const { api, user, setGoods, PATH } = useContext(Ctx);
+    const { api, user, setGoods } = useContext(Ctx);
     const [name, setName] = useState("");
     const [avatar, setAvatar] = useState("");
     const navigate = useNavigate();

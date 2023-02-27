@@ -4,7 +4,7 @@ import { Trash3 } from "react-bootstrap-icons";
 
 import "./row.css";
 
-import { priceDiscount } from "../../assets/functions";
+import { priceDiscount } from "../../utils/functions";
 
 import Ctx from "../../Ctx";
 

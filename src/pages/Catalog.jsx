@@ -8,8 +8,10 @@ import Pagination from "../components/Pagination/";
 
 import Ctx from "../Ctx.js"
 
+import { PATH } from "../utils/functions";
+
 export default () => {
-    const {visibleGoods, user, PATH} = useContext(Ctx);
+    const { visibleGoods, user } = useContext(Ctx);
     const [sortGoods, setSortGoods] = useState(visibleGoods);
     const paginate = usePagination(sortGoods, 12);
     const flagHome = false;

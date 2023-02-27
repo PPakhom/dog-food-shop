@@ -1,3 +1,6 @@
+// export const PATH = "/";
+export const PATH = "/dog-food-shop/";
+
 export const priceDiscount = (price, discount) =>  price - price * discount / 100;
 
 export const numArrayToWord = (num, array) => {

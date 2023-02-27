@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Row, Col, Form } from "react-bootstrap";
+import "./addReview.css";
 
 import Ctx from "../../Ctx";
 
-import "./addReview.css";
+import { PATH } from "../../utils/functions";
 
 export default ({ id: productId, setProduct }) => {
-    const {api, goods, setGoods, setVisibleGoods, PATH} = useContext(Ctx);
+    const {api, goods, setGoods, setVisibleGoods} = useContext(Ctx);
     const [active, setActive] = useState(false);
     const [rating, setRating] = useState(1);
     const [text, setText] = useState("");

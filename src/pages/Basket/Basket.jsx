@@ -4,14 +4,14 @@ import {Table} from "react-bootstrap";
 import {EmojiFrown} from "react-bootstrap-icons";
 import "./basket.css";
 
-import { priceDiscount } from "../../assets/functions";
+import { priceDiscount, PATH } from "../../utils/functions";
 
 import Ctx from "../../Ctx";
 import Row from "../../components/Row/Row";
 
 export default () => {
     const [gds, setGds] = useState([]);
-    const {basket, goods, PATH} = useContext(Ctx);
+    const { basket, goods } = useContext(Ctx);
 
     useEffect(() => {
         let arr = [];

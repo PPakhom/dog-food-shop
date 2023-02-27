@@ -4,19 +4,19 @@ import "./card.css"
 import {ReactComponent as Icon_heart_solid} from "../../templates/Icons/heartpaw-solid.svg";
 import {ReactComponent as Icon_heart_regular} from "../../templates/Icons/heartpaw-regular.svg";
 import NoPhoto from "../../templates/Images/no_photo.png"
-import { priceDiscount } from "../../assets/functions";
+import { priceDiscount } from "../../utils/functions";
 
 import Ctx from "../../Ctx";
 
 export default ({data, flagHome}) => {
     const {user, setFavorites, api, setGoods, setVisibleGoods, setBasket} = useContext(Ctx);
     const [like, setLike] = useState(data.likes && data.likes.includes(user._id));
-    const [flag, setFlag] = useState(false);
+    // const [flag, setFlag] = useState(false);
 
     const update = (e) => {
         e.stopPropagation();
         e.preventDefault();
-        setFlag(true);
+        // setFlag(true);
         setLike(!like); // false => true
         api.setLike(data._id, like) // false
             .then(res => res.json())

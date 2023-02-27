@@ -6,8 +6,10 @@ import Ctx from "../../Ctx";
 import usePagination from "../../hooks/usePagination";
 import Pagination from "../../components/Pagination";
 
+import { PATH } from "../../utils/functions";
+
 export default () => {
-    const {favorites, PATH} = useContext(Ctx);
+    const { favorites } = useContext(Ctx);
     const paginate = usePagination(favorites, 3);
 
     const flagHome = false;

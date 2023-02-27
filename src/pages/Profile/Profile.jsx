@@ -6,8 +6,10 @@ import "./profile.css";
 
 import Ctx from "../../Ctx";
 
+import { PATH } from "../../utils/functions";
+
 export default () => {
-    const {user, setUser, api, PATH} = useContext(Ctx);
+    const { user, setUser, api } = useContext(Ctx);
     const [nameFlag, setNameFlag] = useState(false);
     const [name, setName] = useState(user.name);
     const [textFlag, setTextFlag] = useState(false);

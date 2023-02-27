@@ -5,11 +5,13 @@ import Search from "../Search/Search"
 import "./header.css";
 import Ctx from "../../Ctx";
 
+import { PATH } from "../../utils/functions";
+
 import { ReactComponent as Logo } from "../../templates/Icons/logo-dogfood.svg";
 import { PlusCircle } from "react-bootstrap-icons";
 
 export default () => {
-    const {user, setModalActive, favorites, basket, PATH} = useContext(Ctx);
+    const {user, setModalActive, favorites, basket} = useContext(Ctx);
  
     const logIn = (e) => {
         e.preventDefault();
