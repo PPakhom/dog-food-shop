@@ -52,9 +52,7 @@ export default () => {
         }
     }
     useEffect(() => {
-        if (sortGoods.length === 0) {
             setSortGoods(visibleGoods);
-        }
     }, [visibleGoods]); 
 
     return <div className="form-container">
