@@ -6,7 +6,7 @@ import products from "./assets/data.json";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Modal from "./components/Modal";
+import Modal from "./components/Modal/Modal";
 
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
