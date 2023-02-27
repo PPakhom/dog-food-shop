@@ -21,8 +21,6 @@ import Basket from "./pages/Basket/Basket.jsx";
 import {Api} from "./utils//Api";
 import Ctx from "./Ctx";
 
-// const PATH = "/";
-// const PATH = "/dog-food-shop/";
 import { PATH } from "./utils/functions";
 
 const App = () => {

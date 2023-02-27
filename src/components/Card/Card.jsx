@@ -11,14 +11,12 @@ import Ctx from "../../Ctx";
 export default ({data, flagHome}) => {
     const {user, setFavorites, api, setGoods, setVisibleGoods, setBasket} = useContext(Ctx);
     const [like, setLike] = useState(data.likes && data.likes.includes(user._id));
-    // const [flag, setFlag] = useState(false);
 
     const update = (e) => {
         e.stopPropagation();
         e.preventDefault();
-        // setFlag(true);
-        setLike(!like); // false => true
-        api.setLike(data._id, like) // false
+        setLike(!like);
+        api.setLike(data._id, like)
             .then(res => res.json())
             .then(data => {
                 setFavorites(prev => {
