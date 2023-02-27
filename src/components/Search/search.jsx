@@ -24,7 +24,7 @@ export default () => {
     }
     return (
         <div className="search-block">
-            <input placeholder="Поиск..." value={text} onChange={search}/>
+            <input placeholder="Поиск..." value={text} onChange={search} maxLength="50"/>
             <button>{text ? <CloseImg onClick={clearSearch}/> : <SearchImg/>}</button>
             {text && <div className="search-result">
                 По запросу <b>{text}</b>&nbsp;
